@@ -1,23 +1,36 @@
-# KidneyCT Registration Response
+# Registration V4 PRA-CM
 
-本项目包含多期相 CT 配准、增强响应分析及历史基线。论文升级方法已经独立实现为
-`code/registration_v3`，当前 package version 为 `0.4.0`。
+当前分支为 `registration_v4_pracm`，独立保存原始 3-D PRA-CM V4 开发线。
+它不是 V4-Core，也不是后续 V5；三者的模型结构、候选空间、checkpoint 和结果身份
+不能混用。
 
-## 当前主入口
+## 方法身份
 
-- 新方法说明与正式命令：[`code/registration_v3/README.md`](code/registration_v3/README.md)
-- 正式 PLC 训练：`code/registration_v3/scripts/train_plc.py`
-- 单对 NIfTI 推理：`code/registration_v3/scripts/infer_nifti.py`
-- Evaluation-only 标签传播：`code/registration_v3/scripts/evaluate_labels.py`
-- 冻结 PLC 审计契约：`data/PLC_PreRegistration_Analysis_v1`
-- 历史 `DualREG_PatentExperts`：只保留为 baseline，不与 v3 checkpoint/flow cache 混用
+本版本围绕以下对象构建原生三维配准：
 
-Registration v3 已具备显式候选对应、response-conditioned matching、可选 P/A/V
-relational training、三视图体推理、严格 flow provenance、checkpoint/resume、QA 与
-独立标签评价。代码与合成/CUDA 回归已闭环，但尚未完成 PLC/WAW 全量训练，不能把当前
-smoke 结果写成论文性能结果。
+- structural / response 双分支表征；
+- 显式 `(2r+1)^3` 三维候选对应分布与循环搜索；
+- 由候选后验直接得到的熵、峰值概率和位移方差；
+- 多期 CT 星形协议与概率关系闭合，以及独立的 MR--CT 适配协议。
 
-当前目录没有 `.git`；正式运行会冻结配置、输入文件哈希、split/exclusion identity、
-源码树 SHA-256、RNG 及 last/best checkpoint。历史迁移清单见
-[`PROJECT_INVENTORY.md`](PROJECT_INVENTORY.md)。
+完整的方法约定、flow 语义、数据协议和命令见
+[`code/registration_v4_pracm/README.md`](code/registration_v4_pracm/README.md)。
+
+## 主要入口
+
+- 主代码：[`code/registration_v4_pracm`](code/registration_v4_pracm)
+- 配置：[`code/registration_v4_pracm/configs`](code/registration_v4_pracm/configs)
+- 训练：`python -m registration_v4_pracm.scripts.train`
+- 推理：`python -m registration_v4_pracm.scripts.infer`
+- 回归测试：[`code/registration_v4_pracm/tests`](code/registration_v4_pracm/tests)
+- 分支清单：[`git_manifests/registration_v4_pracm.md`](git_manifests/registration_v4_pracm.md)
+
+## 结果边界
+
+这是保留用于追溯设计来源的历史开发分支，不把 V4-Core 或 V5 的 public-8 指标、
+checkpoint 或 flow 归入本方法。外部数据、服务器运行目录和基础模型权重均不在 Git 中。
+
+其他版本请切换到
+[`registration_v4_core`](https://github.com/Mister-Ryder/registration/tree/registration_v4_core)
+或 [`registration_v5`](https://github.com/Mister-Ryder/registration/tree/registration_v5)。
 
