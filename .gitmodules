@@ -1,0 +1,6 @@
+[submodule "benchmark_l2r_mrct/third_party/convexadam"]
+	path = benchmark_l2r_mrct/third_party/convexadam
+	url = https://github.com/multimodallearning/convexAdam.git
+[submodule "benchmark_l2r_mrct/third_party/dino_reg"]
+	path = benchmark_l2r_mrct/third_party/dino_reg
+	url = https://github.com/RPIDIAL/DINO-Reg.git

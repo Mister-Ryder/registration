@@ -1,0 +1,31 @@
+{
+  "schema": "registration_v5_version_manifest_v1",
+  "version": "5.0.0-dino-anchor-capture-corefix-20260827",
+  "created": "2026-08-27",
+  "method_id": "registration_v5",
+  "method_type": "label_free_frozen_candidate_arbitration",
+  "owned_components": [
+    "faithful_full_resolution_24_channel_dsir_training_and_inference",
+    "dense_nonrigid_inverse_consistent_corefix_solver",
+    "capture_range_topology_forward_backward_router",
+    "canonical_fixed_to_moving_dzyx_flow_contract"
+  ],
+  "external_frozen_anchor": "official B04 DINO-Reg",
+  "imports_from_registration_v4_experiment_directories": false,
+  "frozen_v4_core_checkpoint_sha256": "6ba1c54ab260f4fb830b019caeaaf8414c1b45aae435adb4ff9eb68592d5bb70",
+  "dense_solver_implementation_id": "v4_dense_coarse_compose_identity_corefix_v1",
+  "decision_rule": "select dense corefix iff dense coarse body p95 > 24 native voxels and topology and forward/backward QA pass; otherwise select official DINO-Reg anchor",
+  "labels_used_by_training_or_routing": false,
+  "selected_flow_serialization": "byte-identical copy of selected candidate",
+  "constants_frozen_before_public_evaluation": true,
+  "canonical_v2_public8": {
+    "cases": 8,
+    "evaluable_organ_cases": 30,
+    "mean_dice": 0.7859497458400165,
+    "assd_mm": 4.5772762260810245,
+    "hd95_mm": 19.858701211148382,
+    "fold_fraction": 0.026441595289442274,
+    "dense_corefix_pairs": ["0004", "0014"],
+    "dino_anchor_pairs": ["0002", "0006", "0008", "0010", "0012", "0016"]
+  }
+}

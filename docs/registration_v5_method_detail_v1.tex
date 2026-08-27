@@ -1,0 +1,686 @@
+% Registration V5 技术说明 v1.0
+% 编译：xelatex registration_v5_method_detail_v1.tex（建议两遍）
+\documentclass[11pt,a4paper]{ctexart}
+\usepackage[a4paper,margin=2.15cm]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{booktabs,longtable,array,multirow}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{enumitem}
+\usepackage{caption}
+\usepackage[hidelinks]{hyperref}
+\usepackage{url}
+\captionsetup{font=small,labelfont=bf}
+\setlist{itemsep=2pt,topsep=4pt}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Id}{\mathrm{Id}}
+\newcommand{\Dice}{\mathrm{Dice}}
+\newcommand{\ASSD}{\mathrm{ASSD}}
+\newcommand{\HD}{\mathrm{HD}_{95}}
+\newcommand{\Vfive}{\textsc{Registration-V5}}
+\newcommand{\Dino}{\textsc{DINO-Reg}}
+\newcommand{\Core}{\textsc{Dense-Corefix}}
+\newcommand{\safe}{\mathrm{safe}}
+
+\title{面向 MR--CT 配准的 DINO 锚定与捕获感知稠密校正方法\\
+技术说明 v1.0（registration-v5）}
+\author{方法实现文档·冻结发布版}
+\date{2026年8月27日}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+本文说明当前项目中完整 public-8 表现最佳的方法 \Vfive。
+它不是把多个实验目录重新命名，也不是宣称训练出了一个达到同等性能的单一网络，
+而是把已经形成证据的三段机制收拢为一个具有明确对象语义的完整方法：
+以冻结的官方 \Dino{} 位移场作为高性能默认锚点，以冻结 V4-Core 的
+24 通道全分辨率 DSIR 描述子和经审计的 \Core{} 求解器产生大捕获域候选，
+最后使用不读取标签的捕获域--拓扑--双向一致性规则进行整例仲裁。
+在修正缺失器官处理后的 canonical-v2 public-8 协议上，
+该方法取得 Mean Dice $0.785949746$、ASSD $4.577276$ mm、
+HD95 $19.858701$ mm、fold fraction $0.026441595$。
+该结果是目前最佳完成结果，但仍低于 $0.80$，更未达到项目的 $0.85$ 目标；
+本文对此不作夸大。V5 的意义是把最佳已知机制变成一个单目录、可运行、可审计、
+不再依赖实验性 \texttt{registration\_v4\_*} 增量目录的正式基线。
+\end{abstract}
+
+\tableofcontents
+
+\section{方法定位与版本身份}
+
+\subsection{V5 是什么}
+\Vfive{} 的正式信息流为
+\[
+\boxed{
+(I_F,I_M)
+\longrightarrow
+\begin{cases}
+\phi_D=\Dino(I_F,I_M),\\
+\bigl(\phi_C,Q_C\bigr)=
+\Core\!\left(d_\theta(I_F),d_\theta(I_M)\right)
+\end{cases}
+\longrightarrow
+\mathcal{R}(Q_C;\phi_D,\phi_C)
+\longrightarrow \phi_{\mathrm{V5}}
+}
+\]
+其中 $I_F$ 为 fixed MR，$I_M$ 为 moving CT；
+$d_\theta$ 是冻结 V4-Core 描述子；$\phi_D$ 和 $\phi_C$ 是两个
+\emph{完整 fixed-to-moving 采样位移场}；$Q_C$ 是稠密求解器产生的无标签 QA；
+$\mathcal{R}$ 是冻结的整例路由规则。
+
+V5 的版本身份包含以下四点。
+\begin{enumerate}
+  \item \textbf{代码身份：}描述子、训练栈、稠密求解器、路由器、flow 契约和正式
+        命令入口全部位于 \path{code/registration_v5}；
+  \item \textbf{权重身份：}稠密候选复用冻结 V4-Core best checkpoint，
+        文件 SHA-256 为\\
+        \texttt{\small 6ba1c54ab260f4fb830b019caeaaf841}\\
+        \texttt{\small 4c1b45aae435adb4ff9eb68592d5bb70}；
+  \item \textbf{外部锚点身份：}\Dino{} 是冻结的官方上游模型和权重，
+        它是 V5 的候选生成器，不被描述为 V5 自行训练的网络；
+  \item \textbf{结果身份：}V5 报告的 $0.785949746$ 对应既有冻结候选和冻结规则，
+        代码收拢本身不构造一条新的实验结果记录。
+\end{enumerate}
+
+\subsection{为什么从 V4 整理为 V5}
+V4 探索阶段故意把每个假设隔离在不同目录，以保护已有结果并避免一次修改污染全部
+实验。这种组织适合排错，却不适合作为最终方法：描述子、solver 修复和路由规则散落
+在多个增量目录中，单看任一目录都不能得到当前最佳方法。
+
+V5 因此执行的是\textbf{语义收拢而非机制扩张}：
+不增加未经验证的新模块，不改变冻结权重，不覆盖任何 V4 结果；
+只把当前最佳链所必需的实现复制、内部化并给出单一契约。正式包不从任何
+\texttt{registration\_v4\_*} 实验目录导入 Python 实现。
+
+\subsection{方法贡献的准确边界}
+V5 当前成立的贡献是：
+\begin{itemize}
+  \item 将强但可能在大形变病例失效的 foundation correspondence 锚点，与
+        捕获域更大的稠密非刚性候选置于同一 flow 语义下；
+  \item 使用由求解过程本身产生的位移尺度、拓扑和双向证据决定是否替换锚点；
+  \item 将候选选择限制为\textbf{整条冻结 flow 的二选一}，避免未经验证的局部
+        混合产生接缝、单位混淆或折叠；
+  \item 对选中 flow 做逐字节复制和 SHA-256 复核，使“选择”不暗含二次插值。
+\end{itemize}
+当前证据\textbf{不支持}“V4-Core 描述子已经超过 DINO”或“单一 V5 网络达到
+$0.78595$”这两种表述。
+
+\section{问题、信息对象与几何契约}
+
+\subsection{配准任务}
+给定 fixed MR $I_F:\Omega_F\to\R$ 与 moving CT
+$I_M:\Omega_M\to\R$，目标是在 fixed 网格上估计位移
+\[
+\mathbf{u}:\Omega_F\rightarrow\R^3,\qquad
+I_{M\rightarrow F}(\mathbf{x})
+=I_M\!\left(\mathbf{x}+\mathbf{u}(\mathbf{x})\right).
+\]
+MR 与 CT 的强度不存在稳定单调对应；配准依赖的不是原始灰度相等，而是
+跨模态可迁移的结构证据、候选位移的空间一致性以及形变场的拓扑可行性。
+
+\subsection{唯一 flow 约定}
+V5 的所有中间与最终 flow 必须同时满足：
+\begin{itemize}
+  \item shape 为 $[3,D,H,W]$；
+  \item 分量顺序为 $(dz,dy,dx)$；
+  \item 单位为 fixed-grid voxel；
+  \item 映射为 fixed/output grid $\rightarrow$ moving/input sampling；
+  \item fixed affine 与 fixed 图像网格一致；
+  \item schema 为
+        \path{fixed_to_moving_sampling_displacement_dzyx_fixed_voxel_v1}。
+\end{itemize}
+这一约定决定了后续 composition 不是普通向量相加。若基场为 $\mathbf{u}_c$，
+在其变形后坐标上估计残差 $\mathbf{r}$，正确合成为
+\[
+\boxed{
+\mathbf{u}_{\mathrm{total}}(\mathbf{x})
+=\mathbf{r}(\mathbf{x})
++\mathbf{u}_c\!\left(\mathbf{x}+\mathbf{r}(\mathbf{x})\right)
+}
+\]
+而不是 $\mathbf{u}_c(\mathbf{x})+\mathbf{r}(\mathbf{x})$。
+
+\subsection{六类对象及允许操作}
+\begin{table}[htbp]
+\centering
+\small
+\caption{V5 中对象、轴语义与允许操作}
+\begin{tabular}{p{2.4cm}p{3.2cm}p{3.8cm}p{4.3cm}}
+\toprule
+对象 & 形状/单位 & 表达的信息 & 允许操作与禁止事项\\
+\midrule
+图像 $I$ & $[1,1,D,H,W]$ & 模态强度与空间支撑 & 可做固定的模态归一化；不得把 padding 当解剖\\
+DSIR $d(x)$ & $[1,24,D,H,W]$ & 每个位置的 24 维结构表达 & V4 分支沿通道作 $L_2$ 归一化；通道不是候选轴\\
+候选代价 $C_x(k)$ & $[K,D',H',W']$ & 位置 $x$ 对位移假设 $k$ 的不匹配 & 只沿 descriptor 通道求和形成代价；$k$ 才是候选轴\\
+候选后验 $p_x(k)$ & 同候选轴 $K$ & 局部位移假设的相对证据 & 只能沿 $K$ 归一化；不可沿空间或通道 softmax\\
+位移 $\mathbf{u}$ & $[1,3,D,H,W]$，voxel & fixed 到 moving 的采样位置偏移 & 组合必须 pullback；不得混用 xyz/dzyx 或 mm/voxel\\
+QA $Q_C$ & 标量与结构化字典 & 捕获尺度、折叠、正反向链等 & 只可用于冻结路由；不得含标签、Dice 或病例阈值\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{信息保留与消除原则}
+V5 将配准的信息处理划分为三个职责。
+\begin{enumerate}
+  \item \textbf{描述子：消除模态强度、保留位置可辨结构。}
+        若表达把所有局部组织压成相近向量，solver 无法恢复已丢失的信息；
+        若表达保留大量 CT/MR 外观差异，候选排序会被模态而非解剖支配。
+  \item \textbf{求解器：消除孤立噪声、保留空间协调的对应。}
+        正反向一致性、扩散正则与拓扑约束不能创造 correspondence，
+        但能拒绝或修正局部不稳定的匹配。
+  \item \textbf{路由器：消除不必要的二次修正、保留困难病例的大捕获能力。}
+        当默认锚点已足够时，额外优化往往破坏已建立的对应；
+        只有稠密 coarse 位移显示超出小残差捕获域且自身安全时，才允许替换。
+\end{enumerate}
+
+\section{候选 A：冻结的官方 DINO-Reg 锚点}
+
+\subsection{角色}
+\Dino{} 候选记为 $\phi_D$。它提供当前最强、最稳定的默认定位，使用官方
+MR--CT 预处理、DINO 特征/PCA 和其发布的优化路径。V5 的
+\path{scripts/dino_anchor.py} 只是 fail-closed 桥接：
+固定官方参数，载入官方仓库与 foundation weight，执行
+\path{dinoReg.case_inference}，随后仅把上游输出转换为 V5 的 canonical flow。
+
+\subsection{为什么锚点不再被统一残差更新}
+此前实验表明，从 identity 重估整场 dense flow 能改善部分大位移病例，却会破坏
+\Dino{} 已配好的容易病例；从 $\phi_D$ 出发对所有病例再做同一 V4 残差，也没有
+得到稳定净增益。因此 V5 不把 $\phi_D$ 当成“必须继续优化的中间特征”，而把它
+视为一个可直接交付的完整候选。只有满足第\ref{sec:router}节安全条件时，
+才整例替换为另一条完整 flow。
+
+\subsection{对象语义隔离}
+官方 \Dino{} 路径使用其原始 PCA24 匹配定义；V5 不对它的 PCA 通道做 V4 风格
+单位化，也不把其 PCA 维当成候选维。V4-Core 的 $L_2$ 描述子匹配和 DINO 的
+原始 PCA 匹配是两套冻结候选内部语义，二者只在最终 canonical flow 层相遇。
+
+\section{候选 B：V4-Core 描述子与 Dense-Corefix}
+
+\subsection{全分辨率 24 通道 DSIR}
+V4-Core 的冻结描述子记为
+\[
+d_\theta(I)(\mathbf{x})\in\R^{24}.
+\]
+其输入为模态感知归一化后的单通道体数据；先由 Figure-9 对齐的 3-D
+encoder--decoder 在输入分辨率产生 4 通道特征，再对 direct 与 dilation-2
+邻域关系计算 DNS，最后 feature squeezing 为 24 通道 DSIR。
+三条 skip 连接以 concatenation 实现，这是对未明确标注图示的冻结复现假设。
+
+用于 V4-Core solver 时，每个位置只沿 24 个特征分量归一化：
+\[
+\hat d(\mathbf{x})
+=\frac{d(\mathbf{x})}
+{\sqrt{\sum_{c=1}^{24}d_c(\mathbf{x})^2}+\epsilon}.
+\]
+这一操作不会跨候选、空间或 batch 聚合信息。对单位向量，通道求和 SSD 满足
+\[
+\sum_c\left(\hat d_F^c-\hat d_M^c\right)^2
+=2\left(1-\cos(\hat d_F,\hat d_M)\right),
+\]
+因此 solver 使用的是明确的逐位置 descriptor 不匹配，而不是混淆通道和位移轴。
+
+\subsection{冻结训练协议}
+当前 best checkpoint 对应 300 epoch、seed 20260826、$160^3$ crop 的
+protocol-300。精确配置见表\ref{tab:training}.
+
+\begin{table}[htbp]
+\centering
+\small
+\caption{冻结 V4-Core 训练协议（V5 复用，不追溯改写）}
+\label{tab:training}
+\begin{tabular}{ll@{\qquad}ll}
+\toprule
+设置 & 数值 & 设置 & 数值\\
+\midrule
+feature / descriptor channels & $4/24$ &
+DNS dilation & $2$\\
+epochs / seed & $300/20260826$ &
+crop & $160^3$\\
+samples per view & $8196$ &
+contrastive temperature & $0.07$\\
+contrastive chunk & $512$ &
+minimum foreground & $0.10$\\
+variance floor / weight & $0.08/0$ &
+geometry probability & $0$\\
+Adam learning rate & $10^{-4}$ &
+warmup & $10$ epochs\\
+minimum LR factor & $0.02$ &
+gradient clip & $2.0$\\
+precision & bf16 &
+validation volumes & $5$\\
+TensorBoard interval & $5$ optimizer steps &
+minimum free disk & $8$ GiB\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+由于正式配置的 \path{geometry_probability=0} 且
+\path{variance_weight=0}，冻结 checkpoint 的实际优化目标是原图与随机
+单调非线性强度视图之间的采样式对比目标；实现中虽然保留可选几何分支与 variance
+诊断，但不能把它们写成该 checkpoint 的有效训练损失。best checkpoint 位于
+epoch 217，最终训练完成 300 epochs；标签不进入训练与 checkpoint 选择。
+
+\subsection{候选代价与 fixed-denominator 修正}
+在网格位置 $x$、候选位移 $\delta_k$ 上，descriptor SSD 为
+\[
+C_x(k)=\sum_{c=1}^{24}
+\left[\hat d_F^c(x)-\hat d_M^c(x+\delta_k)\right]^2.
+\]
+令 $O_F(x),O_M(x+\delta_k)\in[0,1]$ 为池化后的支撑占用，
+候选证据与未匹配 fixed 支撑分别为
+\[
+E_x(k)=O_F(x)O_M(x+\delta_k),\qquad
+U_x(k)=\max\{O_F(x)-E_x(k),0\}.
+\]
+V5 使用固定分母局部代价
+\[
+\widetilde C_x(k)=
+\frac{G*\big(C_x(k)E_x(k)+P\,U_x(k)\big)}
+     {G*O_F(x)+\epsilon},
+\qquad P=8,
+\]
+其中 $G$ 是局部平滑核。分母只由 fixed 支撑决定，不随候选重叠面积变化，
+从而消除“候选把组织移出视野便因有效体素更少而获得更低均值代价”的漏洞。
+
+\subsection{大捕获域 coarse 阶段}
+coarse 阶段在 spacing $g_c=12$ native voxels 的网格上，以 half-width
+$h_c=4$ 搜索：
+\[
+R_c=g_ch_c=48\ \text{native voxels}.
+\]
+它不是全局平移或少量稀疏点，而是在三维网格上产生稠密非刚性候选场。
+固定到移动、移动到固定两向代价分别计算，随后通过 coupled convex 与
+15 次 inverse-consistency 更新形成协调的 coarse field。
+
+coarse proposal 必须与 identity 在\textbf{同一全分辨率目标}下比较。
+只有目标改善、有效支撑没有异常下降、折叠率不超阈值，才进入残差阶段；
+否则保留 identity。这样避免不同阶段用不可比的分数做选择。
+
+\subsection{spacing-6 残差与 pullback 合成}
+接受 coarse flow $\mathbf{u}_c$ 后，先用它预变形 moving descriptor，
+再在 spacing $g_r=6$、half-width $h_r=4$ 的局部窗口估计残差：
+\[
+R_r=g_rh_r=24\ \text{native voxels}.
+\]
+残差经过离散匹配和 80 次 Adam refinement（Adam grid spacing 2，
+learning rate 1.0，diffusion weight 1.25）。最终按
+\[
+\mathbf{u}(\mathbf{x})
+=\mathbf{r}(\mathbf{x})
++\mathbf{u}_c(\mathbf{x}+\mathbf{r}(\mathbf{x}))
+\]
+做 pullback 合成。这一修复直接对应此前“把两侧位移在错误坐标上简单相加”的
+真实错误。
+
+\subsection{同目标接受与 Jacobian 回溯}
+对 previous/coarse、discrete 和 refined 三种 proposal，V5 在同一 full-resolution
+目标下选择。设上一接受场目标为 $J_{\mathrm{prev}}$，候选为 $J_q$，
+候选至少需要
+\[
+J_{\mathrm{prev}}-J_q
+>
+\max\left(10^{-6},\,10^{-4}|J_{\mathrm{prev}}|\right)
+\]
+且有效支撑下降不超过 $10^{-2}$。同时要求
+\[
+\mathrm{fold\_fraction}\le10^{-4}.
+\]
+若 refinement 超过折叠阈值，则在 previous 与 proposal 之间进行最多 12 次
+二分回溯，寻找满足拓扑门的最大安全步长。该机制减少折叠，但不能把错误
+correspondence 变正确；它是安全约束，不是相似性证据。
+
+\section{捕获感知的无标签路由}
+\label{sec:router}
+
+\subsection{为什么路由的对象必须是完整 flow}
+局部体素级混合需要证明两场的坐标语义、局部置信度和边界过渡可比较。
+当前实验没有提供足够证据。V5 因而只在病例层面对两条完整候选做二选一：
+\[
+\phi_{\mathrm{V5}}=
+\begin{cases}
+\phi_C,& \text{若稠密候选超出 residual 捕获域且通过两类安全门},\\
+\phi_D,& \text{否则}.
+\end{cases}
+\]
+这里不是对 flow 作线性混合；被选文件会逐字节复制。
+
+\subsection{捕获域门}
+从 \Core{} coarse candidate 的 body-mask QA 读取位移模长的 95 分位
+$q_{95}$。residual 的冻结捕获半径为
+\[
+R_r=6\times4=24\ \text{native voxels}.
+\]
+只有严格满足 $q_{95}>24$，才认为小残差局部搜索可能无法覆盖该病例所需位移，
+大捕获域 dense candidate 才具有替换锚点的必要性。使用严格大于而非大于等于，
+避免边界值的隐式放宽。
+
+\subsection{拓扑门与双向门}
+拓扑安全条件为
+\[
+T=
+\mathbf{1}\!\left[
+\mathrm{fold\_fraction}_{c}\le10^{-4}
+\ \land\
+\min_{\mathbf{x}}\det\nabla\phi_c(\mathbf{x})>0
+\right].
+\]
+双向链安全条件 $B$ 要求：solver algorithm chain 明确包含
+\path{forward_backward_inverse_consistency}，inverse-consistency iterations
+为正，且正向/反向 coarse cost QA 中的数值均有限。
+
+最终路由变量为
+\[
+z=\mathbf{1}[q_{95}>24]\cdot T\cdot B,\qquad
+\phi_{\mathrm{V5}}=
+\begin{cases}
+\phi_C,&z=1,\\
+\phi_D,&z=0.
+\end{cases}
+\]
+路由不读取 segmentation、Dice、ASSD、HD95、病例编号或任何 case-specific
+阈值；常数在 public evaluation 前冻结。
+
+\subsection{逐字节物化}
+V5 对两条候选先验证 schema、shape、分量顺序、单位、映射和有限性；
+选择后以文件复制物化到最终目录，再比较源文件和目标文件 SHA-256。
+若哈希不一致则失败。这样可证明路由不会因重新保存、插值或 dtype 转换改变
+已报告候选。
+
+\section{完整推理流程}
+
+对每一对 MR fixed / CT moving，正式推理为：
+\begin{enumerate}
+  \item 将 CT 重采样到 fixed MR 网格；固定 affine 与共同 shape；
+  \item 以官方冻结参数执行 \Dino{}，输出 canonical $\phi_D$；
+  \item 按模态规则归一化 MR/CT，并从归一化前的图像构造前景支撑；
+  \item 载入 SHA-256 锁定的 V4-Core best checkpoint，提取两侧全分辨率
+        24 通道 DSIR；
+  \item 沿 descriptor 通道作 $L_2$ 归一化，构造 fixed-denominator 代价；
+  \item 执行 spacing-12 双向 dense coarse、同目标 identity 接受；
+  \item 执行 spacing-6 residual、Adam refinement、pullback composition 和
+        Jacobian-safe 回溯，得到 $\phi_C,Q_C$；
+  \item 由 $q_{95}$、topology 与 forward/backward QA 计算 $z$；
+  \item 逐字节复制 $\phi_C$ 或 $\phi_D$ 为最终 $\phi_{\mathrm{V5}}$；
+  \item 写入候选哈希、选择证据、版本和 flow contract，随后才允许做标签评价。
+\end{enumerate}
+
+\section{评价协议}
+
+\subsection{canonical-v2}
+public-8 包含 8 个固定 MR--CT 对。0002 与 0004 的 left-kidney 标注不可用，
+旧评价曾把它们当作 Dice 0，造成系统性低估。canonical-v2 的规则是：
+先对每个器官只在实际有标注的病例上求均值，再对 liver、spleen、
+right kidney、left kidney 四器官等权宏平均。共 30 个可评价器官病例。
+
+\subsection{四项指标}
+\begin{itemize}
+  \item Mean Dice（$\uparrow$）：四器官等权宏平均；
+  \item ASSD（mm，$\downarrow$）：平均对称表面距离；
+  \item HD95（mm，$\downarrow$）：对称表面距离的 95 分位；
+  \item fold fraction（$\downarrow$）：Jacobian determinant 非正的体素比例。
+\end{itemize}
+标签只在所有 flow 落盘后用于评价，不参与候选训练、路由或参数选择。
+
+\section{实验结果与证据链}
+
+\subsection{完整 public-8 主结果}
+\begin{table}[htbp]
+\centering
+\small
+\caption{canonical-v2 public-8 完整四指标（按 Mean Dice 降序）}
+\label{tab:main-results}
+\begin{tabular}{p{4.4cm}rrrr}
+\toprule
+方法 & Mean Dice $\uparrow$ & ASSD mm $\downarrow$ & HD95 mm $\downarrow$ &
+Fold fraction $\downarrow$\\
+\midrule
+\textbf{V5 DINO-anchor capture-router} &
+\textbf{0.785950} & \textbf{4.577276} & \textbf{19.858701} & \textbf{0.026441595}\\
+B04 DINO-Reg & 0.782112 & 4.962758 & 23.348518 & 0.041089906\\
+B02 ConvexAdam + MIND-SSC & 0.735027 & 6.296807 & 20.377894 & 0.015578249\\
+V4 dense-corefix（全 8 例统一使用） & 0.711400 & 7.077068 & 30.807623 & 0.000138368\\
+冻结 V4-Core & 0.663362 & 8.234422 & 27.164855 & 0.000059382\\
+PRA-CM v3 / B10 & 0.412384 & 15.299623 & 39.364444 & 0.000647142\\
+B05 Mok/DNS 复现 & 0.380776 & 15.041330 & 38.751084 & 0.003902902\\
+Identity & 0.370861 & 15.631536 & 39.433018 & 0\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+相对冻结 B04，V5 的绝对变化为
+\[
+\begin{aligned}
+\Delta\Dice&=+0.003838,&
+\Delta\ASSD&=-0.385482\ \mathrm{mm},\\
+\Delta\HD&=-3.489817\ \mathrm{mm},&
+\Delta\mathrm{fold}&=-0.014648310.
+\end{aligned}
+\]
+因此 V5 的收益不只是 Dice；更明显的是尾部表面误差和折叠比例下降。
+
+\subsection{路由选择}
+\begin{table}[htbp]
+\centering
+\caption{冻结 public-8 路由结果}
+\begin{tabular}{ccccccccc}
+\toprule
+病例 & 0002 & 0004 & 0006 & 0008 & 0010 & 0012 & 0014 & 0016\\
+\midrule
+选择 & DINO & Corefix & DINO & DINO & DINO & DINO & Corefix & DINO\\
+\bottomrule
+\end{tabular}
+\end{table}
+V5 在 8 例中有 6 例逐字节保留 DINO，只有 0004、0014 选择 dense-corefix。
+这说明性能主体仍来自强锚点，路由只吸收互补的困难病例能力。
+尤其 0014 的病例平均 Dice 并非高于 DINO，但 HD95 与折叠显著改善；
+该选择来自冻结的无标签捕获规则，而不是事后以 Dice 挑选。
+
+\subsection{机制级阶段证据}
+\begin{table}[htbp]
+\centering
+\small
+\caption{从训练型 V4 到 V5 的已完成阶段}
+\begin{tabular}{p{3.7cm}rrrrp{4.0cm}}
+\toprule
+阶段 & Dice & ASSD & HD95 & Fold & 说明\\
+\midrule
+冻结 V4-Core & 0.663362 & 8.234422 & 27.164855 & 0.000059 &
+训练型 24 通道 DSIR 的正式基线\\
+统一 dense-corefix & 0.711400 & 7.077068 & 30.807623 & 0.000138 &
+修正 solver 后 Dice 明显增加，但难以统一替代强锚点\\
+冻结 DINO anchor & 0.782112 & 4.962758 & 23.348518 & 0.041090 &
+最强单候选，但困难病例与折叠仍有空间\\
+V5 capture-router & 0.785950 & 4.577276 & 19.858701 & 0.026442 &
+保留 6 例锚点，只吸收 2 例大捕获候选\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+固定 public-3（0004、0010、0002）的机制试验中，V4-Core 为
+$0.6350$，dense-corefix 为 $0.6944$，B04 为 $0.7279$。
+这说明 solver 修正确实回收了 V4-Core 的一部分损失，但 descriptor/candidate
+质量仍是限制；也解释了为什么最终 V5 不能简单在所有病例统一使用 dense-corefix。
+
+\section{方法机理解释}
+
+\subsection{为什么有增益}
+V5 的增益来自\textbf{职责互补}，不是三个“看上去合理”的模块堆叠。
+\begin{itemize}
+  \item DINO anchor 提供高判别力和较好的常规病例定位；
+  \item dense-corefix 提供 spacing-12、48 voxel 的非刚性捕获范围，并通过
+        fixed-denominator、双向一致性与拓扑门避免明显退化；
+  \item router 用 dense coarse 自身暴露的位移尺度判断小残差是否可能失效，
+        在没有标签的前提下把大捕获能力限制到少数必要病例。
+\end{itemize}
+每一段消费的对象均由上一段明确提供：descriptor 产生候选代价，solver 将代价
+变成完整 flow 与 QA，router 只消费 QA 并选择完整 flow。
+
+\subsection{为什么仍未达到 0.80/0.85}
+当前结果表明至少存在三项剩余限制。
+\begin{enumerate}
+  \item \textbf{V4-Core correspondence 仍弱。}
+        其 full-8 $0.66336$，即使 solver 修复后也只有 $0.71140$；
+        这不是继续增加 epoch 自然可补齐的 $0.14$ 差距。
+  \item \textbf{整例路由粒度粗。}
+        一个病例可能同时包含 DINO 更好的区域和 dense 更好的区域；
+        但在局部置信度尚不可比时，贸然融合会破坏 topology，当前选择保守。
+  \item \textbf{路由只识别“超出捕获域”，不直接衡量对应正确性。}
+        $q_{95}>24$ 表示 dense 分支认为需要大位移，并不证明其解剖对应必然正确。
+\end{enumerate}
+因此 V5 是当前最佳可靠节点，而不是终点。后续若要越过 $0.80$，
+优先问题仍是提高可验证的跨模态 correspondence 信息，而不是无约束增加
+正则、训练 epoch 或路由规则。
+
+\subsection{当前创新性是否被弱化}
+V5 确实不再坚持“所有性能必须由自研描述子单独产生”，但没有丢失当前有效的
+创新方向：其核心是将\textbf{捕获域作为可计算的能力边界}，并把 topology 和
+forward/backward chain 作为替换强锚点的必要条件。创新性从“再造一个通用特征”
+转为“如何让强外部 correspondence 与自研大捕获非刚性求解器在同一几何契约下
+安全协作”。论文表述必须清楚区分上游 DINO、V4-Core 与 V5 router 的归属。
+
+\section{失败保护与 fail-closed 行为}
+
+V5 在以下情况拒绝输出而不是静默降级：
+\begin{itemize}
+  \item DINO 官方仓库、权重或输入图像不存在；
+  \item 冻结 V4-Core checkpoint 的文件 SHA-256 不匹配；
+  \item protocol hash 与冻结 checkpoint 不一致；
+  \item fixed/moving 模态不是 MR fixed / CT moving；
+  \item candidate flow 缺字段、shape 错误、含 NaN/Inf、分量/单位/映射不一致；
+  \item corefix QA 的 solver implementation ID、spacing 或搜索半径不匹配；
+  \item 输出目录已存在；
+  \item 物化后 flow 的 SHA-256 与选中候选不同。
+\end{itemize}
+这些检查使 V5 的“完整”不只是文件集中，还包括运行时方法身份闭合。
+
+\section{V5 代码组织与运行入口}
+
+\subsection{单目录结构}
+\begin{longtable}{p{5.2cm}p{9.0cm}}
+\caption{V5 正式代码组成}\\
+\toprule
+路径 & 职责\\
+\midrule
+\endfirsthead
+\toprule
+路径 & 职责\\
+\midrule
+\endhead
+\path{code/registration_v5/dns/} &
+内部化的 faithful Figure-9 特征、DNS/DSIR 组件\\
+\path{code/registration_v5/network.py} &
+冻结描述子网络与实际 representation objective\\
+\path{code/registration_v5/training/} &
+训练增强与运行时；不依赖 V4 实验目录\\
+\path{code/registration_v5/inference/} &
+内部化的 dense correspondence / instance optimization 原语\\
+\path{code/registration_v5/solver/corefix.py} &
+spacing-12 coarse、spacing-6 residual、composition 与安全接受\\
+\path{code/registration_v5/routing/capture.py} &
+捕获域、topology、forward/backward 路由\\
+\path{code/registration_v5/scripts/dino_anchor.py} &
+官方 DINO-Reg 冻结桥接与 canonical flow 导出\\
+\path{code/registration_v5/scripts/infer_dense.py} &
+SHA 锁定 checkpoint 的 dense-corefix 推理\\
+\path{code/registration_v5/scripts/route_pair.py} &
+候选验证、决策、逐字节复制与哈希复核\\
+\path{code/registration_v5/VERSION_MANIFEST.json} &
+方法版本、checkpoint、规则与四指标的机器可读身份\\
+\bottomrule
+\end{longtable}
+
+\subsection{三个正式命令}
+为避免 DINO 与 DSIR 模型在同一进程中同时占用 GPU，推荐三个独立进程：
+\begin{enumerate}
+  \item \path{python -m registration_v5.scripts.dino_anchor} 生成 $\phi_D$；
+  \item \path{python -m registration_v5.scripts.infer_dense} 生成 $\phi_C,Q_C$；
+  \item \path{python -m registration_v5.scripts.route_pair} 物化最终 flow。
+\end{enumerate}
+完整参数示例见 \path{code/registration_v5/README.md}。
+
+\section{可复现性清单}
+
+\begin{longtable}{p{5.0cm}p{9.2cm}}
+\caption{冻结复现契约}\\
+\toprule
+项目 & 冻结值\\
+\midrule
+\endfirsthead
+\toprule
+项目 & 冻结值\\
+\midrule
+\endhead
+V5 version &
+\path{5.0.0-dino-anchor-capture-corefix-20260827}\\
+V4-Core best checkpoint &
+epoch 217；SHA-256\newline
+\texttt{\small 6ba1c54ab260f4fb830b019caeaaf841}\newline
+\texttt{\small 4c1b45aae435adb4ff9eb68592d5bb70}\\
+训练终点 & 300 epochs；last checkpoint 保留\\
+descriptor & Figure-9 full-resolution，4 feature channels，24 DSIR channels，dilation 2\\
+coarse search & spacing 12，half-width 4，radius 48 native voxels\\
+residual search & spacing 6，half-width 4，radius 24 native voxels\\
+inverse consistency & 15 iterations\\
+Adam refinement & spacing 2，80 iterations，learning rate 1.0\\
+diffusion weight & 1.25\\
+invalid/unmatched penalty & 8.0\\
+topology threshold & maximum fold fraction $10^{-4}$，minimum Jacobian $>0$\\
+router & $q_{95}>24$ 且 topology safe 且 forward/backward safe\\
+flow schema &
+\path{fixed_to_moving_sampling_displacement_dzyx_fixed_voxel_v1}\\
+metric schema & canonical-v2，四器官等权宏平均，排除不可用标签\\
+public-8 completion & 8/8 flows，30 个可评价器官病例\\
+\bottomrule
+\end{longtable}
+
+\section{结论}
+V5 将过去分散的最佳机制凝结为一条可以准确表述的闭环：
+\[
+\text{强默认对应}
+\;+\;
+\text{大捕获、可审计的稠密候选}
+\;+\;
+\text{由能力边界触发的安全替换}.
+\]
+它当前达到 $0.78595/4.5773/19.8587/0.02644$，是完整 public-8 的最佳完成
+结果，也把 B04 的尾部距离和折叠进一步降低。与此同时，6/8 病例仍依赖 DINO
+锚点，说明 V4-Core correspondence 尚未成为主要性能来源。这个事实应被保留在
+方法定义和后续研究决策中：V5 是一个结构完整、对象语义明确、结果不丢失的正式
+基线；下一阶段的首要任务是提升可证实的跨模态对应信息，而不是继续堆叠
+缺乏必然联系的机制。
+
+\appendix
+
+\section{符号表}
+\begin{longtable}{p{3.0cm}p{11.0cm}}
+\toprule
+符号 & 含义\\
+\midrule
+$I_F,I_M$ & fixed MR 与 moving CT\\
+$d_\theta$ & 冻结 V4-Core 24 通道 DSIR 描述子\\
+$C_x(k)$ & 位置 $x$ 对候选位移 $k$ 的 descriptor 代价\\
+$\phi_D$ & 冻结官方 DINO-Reg 完整 flow\\
+$\phi_C$ & V4-Core + dense-corefix 完整 flow\\
+$Q_C$ & dense-corefix 的无标签结构化 QA\\
+$g_c,h_c,R_c$ & coarse grid spacing、half-width 与 native-voxel 捕获半径\\
+$g_r,h_r,R_r$ & residual grid spacing、half-width 与捕获半径\\
+$q_{95}$ & dense coarse body-mask 位移模长的 95 分位\\
+$T,B$ & topology safety 与 forward/backward chain safety\\
+$z$ & 路由二值变量\\
+$\phi_{\mathrm{V5}}$ & 最终逐字节物化的 V5 flow\\
+\bottomrule
+\end{longtable}
+
+\section{结果使用声明}
+任何论文表格若使用 V5 数值，应同时满足：
+\begin{enumerate}
+  \item 标注它是 DINO-anchor capture-router，而不是纯 V4-Core；
+  \item 使用 canonical-v2 并说明缺失 left-kidney 的排除规则；
+  \item 同时报告 Dice、ASSD、HD95 与 fold fraction；
+  \item 保留完整 8/8 与 30 个可评价器官病例的统计口径；
+  \item 不把本技术说明中的代码收拢称为一次新的训练或新的 public 测试。
+\end{enumerate}
+
+\end{document}
