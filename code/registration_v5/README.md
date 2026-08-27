@@ -19,6 +19,14 @@ not V5-owned code.  V5 never describes this anchor as a newly trained V5
 network.  No Python module is imported from an experimental
 `registration_v4_*` directory.
 
+## Method document
+
+- LaTeX source: `docs/registration_v5_method_detail_v1.tex`
+- Compiled PDF: `docs/registration_v5_method_detail_v1.pdf`
+
+The document is stored inside this method package so the V5 branch can be
+reviewed and exported without relying on another workspace directory.
+
 ## Frozen result identity
 
 - public-8 canonical-v2: Mean Dice `0.7859497458400165`, ASSD
@@ -98,4 +106,5 @@ the frozen checkpoint or be reported under the frozen result manifest.
 - `scripts/infer_dense.py`: frozen descriptor + corefix inference;
 - `scripts/route_pair.py`: immutable whole-case arbitration;
 - `VERSION_MANIFEST.json`: exact method/result identity;
+- `docs/`: complete V5 technical document in TeX and PDF;
 - `tests/`: component and release-contract tests.
