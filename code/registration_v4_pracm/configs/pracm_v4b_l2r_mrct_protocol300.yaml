@@ -1,0 +1,112 @@
+model:
+  variant: v4b
+  acquisition_identities: [mr, ct]
+  encoder_channels: [24, 48, 72, 96]
+  descriptor_channels: 32
+  response_channels: 16
+  correlation_levels: [3, 2, 1]
+  search_radii: [4, 3, 2]
+  recurrent_iterations: [3, 2, 2]
+  dns_dilations: [1, 2]
+  appearance_temperature: 0.07
+  appearance_samples: 768
+  appearance_variance_floor: 0.08
+  maximum_search_support_mm: [96.0, 40.0, 14.0]
+  minimum_search_support_mm: [48.0, 16.0, 6.0]
+  posterior_mode_radius: 1.75
+  posterior_topk: 7
+  solver_iterations_train: 4
+  solver_iterations_inference: 10
+  solver_data_sigma: 1.25
+  solver_spatial_weight: 0.35
+  acquisition_logit_bound: 0.50
+  update_hidden_channels: 48
+  phase_embedding_channels: 8
+  correlation_temperature: 0.12
+  candidate_chunk_size: 8
+  response_gate_mode: neutral
+  response_gate_floor: 0.20
+  uncertainty_update_floor: 0.15
+  maximum_learned_bias: 0.25
+  align_corners: true
+
+losses:
+  appearance_invariance: 1.0
+  appearance_variance: 0.10
+  structural: 1.0
+  photometric: 0.0
+  smooth_first: 0.15
+  smooth_second: 0.25
+  jacobian: 0.05
+  synthetic_flow: 0.50
+  synthetic_candidate: 1.0
+  synthetic_contrastive: 0.25
+  uncertainty_calibration: 0.10
+  posterior_solver_consistency: 0.0
+  response_reconstruction: 0.0
+  response_phase: 0.0
+  structural_phase_adversarial: 0.0
+  structural_response_orthogonality: 0.0
+  response_gate_support: 0.0
+  relational_moments: 0.0
+  relational_entropy: 0.0
+  hard_negative_margin: 0.20
+  jacobian_margin: 0.05
+  minimum_gate_support: 0.35
+
+augmentation:
+  maximum_velocity_voxels: 8.0
+  velocity_control_shape: [5, 7, 7]
+  integration_steps: 5
+  gamma_range: [0.55, 1.80]
+  gain_range: [0.75, 1.25]
+  bias_field_strength: 0.15
+  noise_std: 0.015
+  inversion_probability: 0.25
+  piecewise_strength: 0.35
+
+data:
+  dataset: l2r_mrct
+  manifest: /root/autodl-tmp/l2r_benchmark_v1/manifests/l2r_unpaired_train.json
+  phase_inventory: ""
+  data_root: ""
+  scalar_cache: ""
+  intensity_mode: zscore
+  hu_window: [-200.0, 400.0]
+  patch_size: [96, 160, 160]
+  samples_per_epoch: 85
+  triplet_probability: 0.0
+  minimum_content_fraction: 0.10
+  foreground_threshold: 0.02
+  cache_patients: 2
+
+training:
+  protocol_id: pracm_v4_protocol300_v4b
+  epochs: 300
+  batch_size: 1
+  learning_rate: 0.0001
+  weight_decay: 0.0001
+  gradient_clip_norm: 2.0
+  precision: fp16
+  seed: 20260823
+  workers: 2
+  validation_cases: 16
+  synthetic_every_steps: 1
+  log_every_steps: 10
+  warmup_epochs: 10
+  minimum_epochs: 180
+  early_stopping_patience: 60
+  early_stopping_enabled: false
+  minimum_learning_rate_factor: 0.05
+  validation_label_selection: false
+  checkpoint_every_epochs: 100
+  minimum_free_disk_gib: 8.0
+  representation_stage_epochs: 40
+  candidate_ramp_epochs: 60
+  deformation_ramp_epochs: 100
+
+inference:
+  tile_size: [96, 160, 160]
+  tile_overlap: [48, 80, 80]
+  padding_mode: replicate
+

@@ -1,0 +1,99 @@
+model:
+  acquisition_identities: [mr, ct]
+  encoder_channels: [24, 48, 72, 96]
+  descriptor_channels: 32
+  response_channels: 16
+  correlation_levels: [3, 2, 1]
+  search_radii: [4, 3, 2]
+  recurrent_iterations: [3, 2, 2]
+  dns_dilations: [1, 2]
+  update_hidden_channels: 48
+  phase_embedding_channels: 8
+  correlation_temperature: 0.12
+  candidate_chunk_size: 8
+  # The auxiliary domains are unpaired, so a candidate-specific MR/CT response
+  # gate is not identifiable. Neutral mode preserves structural correlation.
+  response_gate_mode: neutral
+  response_gate_floor: 0.20
+  uncertainty_update_floor: 0.15
+  maximum_learned_bias: 0.25
+  align_corners: true
+
+losses:
+  structural: 1.0
+  # Cross-modal raw photometry is deliberately weak; correspondence is driven
+  # by structural self-similarity and exact synthetic deformation supervision.
+  photometric: 0.02
+  smooth_first: 0.15
+  smooth_second: 0.25
+  jacobian: 0.05
+  synthetic_flow: 0.50
+  synthetic_candidate: 1.0
+  synthetic_contrastive: 0.25
+  uncertainty_calibration: 0.10
+  response_reconstruction: 0.10
+  response_phase: 0.05
+  structural_phase_adversarial: 0.02
+  structural_response_orthogonality: 0.02
+  response_gate_support: 0.0
+  relational_moments: 0.0
+  relational_entropy: 0.0
+  hard_negative_margin: 0.20
+  jacobian_margin: 0.05
+  minimum_gate_support: 0.35
+
+augmentation:
+  maximum_velocity_voxels: 8.0
+  velocity_control_shape: [5, 7, 7]
+  integration_steps: 5
+  gamma_range: [0.55, 1.80]
+  gain_range: [0.75, 1.25]
+  bias_field_strength: 0.15
+  noise_std: 0.015
+
+data:
+  dataset: l2r_mrct
+  manifest: /root/autodl-tmp/l2r_benchmark_v1/manifests/l2r_unpaired_train.json
+  phase_inventory: ""
+  data_root: ""
+  scalar_cache: ""
+  intensity_mode: zscore
+  hu_window: [-200.0, 400.0]
+  # Match the in-plane inference tile so the correspondence model sees the
+  # same anatomical context during training; full-volume inference still
+  # covers the native fixed grid by overlap tiling.
+  patch_size: [96, 160, 160]
+  samples_per_epoch: 85
+  triplet_probability: 0.0
+  minimum_content_fraction: 0.10
+  foreground_threshold: 0.02
+  cache_patients: 2
+
+training:
+  protocol_id: protocol_300
+  epochs: 300
+  batch_size: 1
+  learning_rate: 0.0001
+  weight_decay: 0.0001
+  gradient_clip_norm: 2.0
+  precision: fp16
+  seed: 20260823
+  workers: 2
+  validation_cases: 16
+  synthetic_every_steps: 1
+  log_every_steps: 10
+  warmup_epochs: 10
+  minimum_epochs: 180
+  early_stopping_patience: 60
+  # protocol_300 is a fixed compute budget. Patience remains a convergence
+  # diagnostic but must not shorten the cross-method schedule.
+  early_stopping_enabled: false
+  minimum_learning_rate_factor: 0.05
+  validation_label_selection: false
+  checkpoint_every_epochs: 100
+  minimum_free_disk_gib: 8.0
+
+inference:
+  tile_size: [96, 160, 160]
+  tile_overlap: [48, 80, 80]
+  padding_mode: replicate

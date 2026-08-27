@@ -1,0 +1,85 @@
+model:
+  encoder_channels: [24, 48, 72, 96]
+  descriptor_channels: 32
+  response_channels: 16
+  correlation_levels: [3, 2, 1]
+  search_radii: [4, 3, 2]
+  recurrent_iterations: [3, 2, 2]
+  dns_dilations: [1, 2]
+  update_hidden_channels: 48
+  phase_embedding_channels: 8
+  correlation_temperature: 0.12
+  candidate_chunk_size: 8
+  response_gate_mode: learned
+  response_gate_floor: 0.20
+  uncertainty_update_floor: 0.15
+  maximum_learned_bias: 0.25
+  align_corners: true
+
+losses:
+  structural: 1.0
+  photometric: 0.10
+  smooth_first: 0.15
+  smooth_second: 0.25
+  jacobian: 0.05
+  synthetic_flow: 0.50
+  synthetic_candidate: 1.0
+  synthetic_contrastive: 0.25
+  uncertainty_calibration: 0.10
+  response_reconstruction: 0.10
+  response_phase: 0.05
+  structural_phase_adversarial: 0.02
+  structural_response_orthogonality: 0.02
+  response_gate_support: 0.02
+  relational_moments: 0.25
+  relational_entropy: 0.05
+  hard_negative_margin: 0.20
+  jacobian_margin: 0.05
+  minimum_gate_support: 0.35
+
+augmentation:
+  maximum_velocity_voxels: 8.0
+  velocity_control_shape: [5, 7, 7]
+  integration_steps: 5
+  gamma_range: [0.55, 1.80]
+  gain_range: [0.75, 1.25]
+  bias_field_strength: 0.15
+  noise_std: 0.015
+
+data:
+  manifest: data/PLC_R_v1/PLC_R_manifest_v1.json
+  phase_inventory: data/PLC_PreRegistration_Analysis_v1/case_inventory.csv
+  data_root: /replace/with/PLC-CECT
+  scalar_cache: /replace/with/PLC_R_scalar_cache
+  intensity_mode: plc_uint8
+  hu_window: [-200.0, 400.0]
+  patch_size: [96, 160, 160]
+  samples_per_epoch: 512
+  triplet_probability: 0.50
+  minimum_content_fraction: 0.01
+  foreground_threshold: 0.000001
+  cache_patients: 2
+
+training:
+  epochs: 200
+  batch_size: 1
+  learning_rate: 0.0001
+  weight_decay: 0.0001
+  gradient_clip_norm: 2.0
+  precision: fp16
+  seed: 20260823
+  workers: 2
+  validation_cases: 87
+  synthetic_every_steps: 1
+  log_every_steps: 10
+  warmup_epochs: 10
+  minimum_epochs: 60
+  early_stopping_patience: 25
+  minimum_learning_rate_factor: 0.05
+  validation_label_selection: true
+  checkpoint_every_epochs: 50
+
+inference:
+  tile_size: [96, 192, 192]
+  tile_overlap: [48, 96, 96]
+  padding_mode: replicate
