@@ -1,23 +1,18 @@
-# KidneyCT Registration Response
+# Registration 方法版本仓库
 
-本项目包含多期相 CT 配准、增强响应分析及历史基线。论文升级方法已经独立实现为
-`code/registration_v3`，当前 package version 为 `0.4.0`。
+本仓库用独立 Git 分支保存三个不同的方法身份。`main` 只负责版本导航，
+不代表任何一次训练、推理或实验结果；查看和复现实验时，请先切换到对应分支。
 
-## 当前主入口
+| 分支 | 方法身份 | 主代码目录 | 冻结 public-8 结果 |
+|---|---|---|---|
+| [`registration_v4_pracm`](https://github.com/Mister-Ryder/registration/tree/registration_v4_pracm) | 原始 3-D PRA-CM V4 开发线 | `code/registration_v4_pracm` | 历史开发版本，不作为当前最佳结果 |
+| [`registration_v4_core`](https://github.com/Mister-Ryder/registration/tree/registration_v4_core) | 忠实 DSIR / V4-Core 冻结线 | `code/registration_v4_final` | Dice `0.663361521` |
+| [`registration_v5`](https://github.com/Mister-Ryder/registration/tree/registration_v5) | DINO anchor + dense-corefix + 无标签路由的完整版本 | `code/registration_v5` | Dice `0.785949746` |
 
-- 新方法说明与正式命令：[`code/registration_v3/README.md`](code/registration_v3/README.md)
-- 正式 PLC 训练：`code/registration_v3/scripts/train_plc.py`
-- 单对 NIfTI 推理：`code/registration_v3/scripts/infer_nifti.py`
-- Evaluation-only 标签传播：`code/registration_v3/scripts/evaluate_labels.py`
-- 冻结 PLC 审计契约：`data/PLC_PreRegistration_Analysis_v1`
-- 历史 `DualREG_PatentExperts`：只保留为 baseline，不与 v3 checkpoint/flow cache 混用
+每个方法分支的根 `README.md` 都只介绍该分支；完整的代码说明、运行入口、
+指标和边界条件继续保存在对应方法目录中。分支关系与保存原则见
+[`GIT_BRANCHES.md`](GIT_BRANCHES.md)。
 
-Registration v3 已具备显式候选对应、response-conditioned matching、可选 P/A/V
-relational training、三视图体推理、严格 flow provenance、checkpoint/resume、QA 与
-独立标签评价。代码与合成/CUDA 回归已闭环，但尚未完成 PLC/WAW 全量训练，不能把当前
-smoke 结果写成论文性能结果。
-
-当前目录没有 `.git`；正式运行会冻结配置、输入文件哈希、split/exclusion identity、
-源码树 SHA-256、RNG 及 last/best checkpoint。历史迁移清单见
-[`PROJECT_INVENTORY.md`](PROJECT_INVENTORY.md)。
-
+数据集、服务器完整导出、临时探针、大型归档和外部基础模型权重不纳入 Git。
+冻结 checkpoint 或结果快照仅在相应分支明确列出，并通过 manifest 与 SHA-256
+固定身份，不能跨版本混用。
