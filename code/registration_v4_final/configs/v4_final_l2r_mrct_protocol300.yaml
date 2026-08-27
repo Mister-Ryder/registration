@@ -1,0 +1,49 @@
+descriptor:
+  feature_channels: 4
+  descriptor_channels: 24
+  dns_dilation_voxels: 2
+
+solver:
+  backend: descriptor_convexadam
+  grid_spacing: 6
+  displacement_half_width: 4
+  diffusion_weight: 1.25
+  adam_iterations: 80
+  adam_grid_spacing: 2
+  adam_learning_rate: 1.0
+  inverse_consistency: true
+  inverse_consistency_iterations: 15
+  selected_smoothing: 0
+  mask_pool_threshold: 0.25
+  invalid_candidate_penalty: 8.0
+
+training:
+  protocol_id: v4_final_l2r_mrct_protocol300_20260826
+  epochs: 300
+  seed: 20260826
+  crop_shape_dzyx: [96, 96, 96]
+  minimum_foreground_fraction: 0.10
+  samples_per_view: 8196
+  contrastive_chunk_size: 512
+  contrastive_temperature: 0.07
+  variance_floor: 0.08
+  variance_weight: 0.10
+  geometry_probability: 0.50
+  maximum_velocity_voxels: 8.0
+  velocity_control_shape: [5, 7, 7]
+  integration_steps: 5
+  learning_rate: 0.0001
+  warmup_epochs: 10
+  minimum_learning_rate_factor: 0.02
+  gradient_clip_norm: 2.0
+  precision: bf16
+  validation_volumes: 5
+  iteration_log_every_optimizer_steps: 5
+  checkpoint_every_epochs: 100
+  minimum_free_disk_gib: 8.0
+
+inference:
+  descriptor_precision: fp16
+  ct_foreground_min_hu: -500.0
+  require_common_pair_grid: true
+

@@ -1,0 +1,2 @@
+﻿fold_fraction,mean_assd_mm,mean_dice,mean_displacement_mm,mean_hd95_mm,method_id,n_evaluable_labels,n_evaluable_organ_cases,n_pair_calls,n_requested_organ_cases,n_subjects,n_unavailable_organ_cases,p95_displacement_mm,reporting_unit,runtime_seconds,sd_log_jacobian,task_domain,task_group,valid_sampling_fraction
+5.9382120768229166e-05,8.234422115633734,0.6633615210001494,17.406609416007996,27.1648547684334,B10_v4_final,4,30,8,32,8,2,33.36869406700134,composite_target_task,22.67691593337804,0.48021645471453667,l2r_mrct,mr_target,0.9840390735202365

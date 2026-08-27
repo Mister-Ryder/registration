@@ -1,0 +1,13 @@
+{
+  "schema": "registration_evaluation_result_v2",
+  "method_ids": [
+    "B10_v4_final"
+  ],
+  "evaluated_pairs": 8,
+  "labels_loaded_by_runner": false,
+  "label_availability_policy": "exclude_if_missing_in_fixed_or_moving_label",
+  "headline_overlap_aggregation": "equal_weight_label_macro_after_excluding_unavailable",
+  "pair_metrics": "pair_metrics.csv",
+  "organ_metrics": "organ_metrics.csv",
+  "summary": "summary.csv"
+}

@@ -1,0 +1,31 @@
+{
+  "checkpoint": "/root/autodl-tmp/l2r_benchmark_v1/runs/v4_final_faithful_protocol300/B10_v4_final/train/checkpoints/best.pt",
+  "checkpoint_sha256": "6ba1c54ab260f4fb830b019caeaaf8414c1b45aae435adb4ff9eb68592d5bb70",
+  "evaluation": "/root/autodl-tmp/l2r_benchmark_v1/evaluation/v4_final_faithful_protocol300/B10_v4_final",
+  "free_gib": 40.92706298828125,
+  "public8_pairs": 8,
+  "results": "/root/autodl-tmp/l2r_benchmark_v1/results/v4_final_faithful_protocol300/B10_v4_final",
+  "schema": "pracm_v4_final_faithful_completion_v1",
+  "summary": {
+    "fold_fraction": "5.9382120768229166e-05",
+    "mean_assd_mm": "8.234422115633734",
+    "mean_dice": "0.6633615210001494",
+    "mean_displacement_mm": "17.406609416007996",
+    "mean_hd95_mm": "27.1648547684334",
+    "method_id": "B10_v4_final",
+    "n_evaluable_labels": "4",
+    "n_evaluable_organ_cases": "30",
+    "n_pair_calls": "8",
+    "n_requested_organ_cases": "32",
+    "n_subjects": "8",
+    "n_unavailable_organ_cases": "2",
+    "p95_displacement_mm": "33.36869406700134",
+    "reporting_unit": "composite_target_task",
+    "runtime_seconds": "22.67691593337804",
+    "sd_log_jacobian": "0.48021645471453667",
+    "task_domain": "l2r_mrct",
+    "task_group": "mr_target",
+    "valid_sampling_fraction": "0.9840390735202365"
+  },
+  "tensorboard": "/root/tf-logs/v4_final_faithful_protocol300/B10_v4_final"
+}

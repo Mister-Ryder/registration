@@ -1,0 +1,83 @@
+{
+  "best_validation": 0.4007348418235779,
+  "checkpoint_selection": "label-free validation representation loss",
+  "completed_epochs": 300,
+  "labels_used": false,
+  "logical_anchors_per_epoch": 84,
+  "logical_step": 25200,
+  "main_inference_solver": "descriptor ConvexAdam",
+  "optimizer_step": 8400,
+  "optimizer_steps_per_epoch": 28,
+  "per_gpu_batch": 1,
+  "protocol": {
+    "descriptor": {
+      "descriptor_channels": 24,
+      "dns_dilation_voxels": 2,
+      "feature_channels": 4
+    },
+    "inference": {
+      "ct_foreground_min_hu": -500.0,
+      "descriptor_precision": "fp16",
+      "require_common_pair_grid": true
+    },
+    "solver": {
+      "adam_grid_spacing": 2,
+      "adam_iterations": 80,
+      "adam_learning_rate": 1.0,
+      "backend": "descriptor_convexadam",
+      "diffusion_weight": 1.25,
+      "displacement_half_width": 4,
+      "grid_spacing": 6,
+      "invalid_candidate_penalty": 8.0,
+      "inverse_consistency": true,
+      "inverse_consistency_iterations": 15,
+      "mask_pool_threshold": 0.25,
+      "selected_smoothing": 0
+    },
+    "training": {
+      "checkpoint_every_epochs": 100,
+      "contrastive_chunk_size": 512,
+      "contrastive_temperature": 0.07,
+      "crop_shape_dzyx": [
+        160,
+        160,
+        160
+      ],
+      "epochs": 300,
+      "geometry_probability": 0.0,
+      "gradient_clip_norm": 2.0,
+      "integration_steps": 5,
+      "iteration_log_every_optimizer_steps": 5,
+      "learning_rate": 0.0001,
+      "maximum_velocity_voxels": 8.0,
+      "minimum_foreground_fraction": 0.1,
+      "minimum_free_disk_gib": 8.0,
+      "minimum_learning_rate_factor": 0.02,
+      "precision": "bf16",
+      "protocol_id": "v4_final_l2r_mrct_protocol300_faithful_crop160_20260826",
+      "samples_per_view": 8196,
+      "seed": 20260826,
+      "validation_volumes": 5,
+      "variance_floor": 0.08,
+      "variance_weight": 0.0,
+      "velocity_control_shape": [
+        5,
+        7,
+        7
+      ],
+      "warmup_epochs": 10
+    }
+  },
+  "protocol_sha256": "4a61e1cd236f7080f610dfcfc2973d57bb6e550c9529dc0d3f639637c9bc08ed",
+  "public8_used": false,
+  "schema": "pracm_v4_final_training_run_v1",
+  "source_sha256": "6235c94edb0ea7617db9c7f44c95b652a7f1b3df2150c05fbf4869be087f08eb",
+  "status": "completed",
+  "tensorboard_dir": "/root/tf-logs/v4_final_faithful_protocol300/B10_v4_final",
+  "train_anchors": 84,
+  "training_complete": true,
+  "training_manifest": "/root/autodl-tmp/l2r_benchmark_v1/manifests/l2r_unpaired_train.json",
+  "training_manifest_sha256": "e6f0427ab0db79c63f117383acd5bfb21f75477cec6b4d82ee6babb45d2fcb42",
+  "validation_anchors": 5,
+  "world_size": 3
+}
