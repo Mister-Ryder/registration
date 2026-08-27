@@ -1,23 +1,41 @@
-# KidneyCT Registration Response
+# Registration V4-Core（冻结版本）
 
-本项目包含多期相 CT 配准、增强响应分析及历史基线。论文升级方法已经独立实现为
-`code/registration_v3`，当前 package version 为 `0.4.0`。
+当前分支为 `registration_v4_core`，保存第一份成功并冻结的忠实 DSIR / V4-Core
+实现及其 public-8 结果。主代码是 `code/registration_v4_final`；
+`code/registration_v4_pracm` 仅作为明确记录的内部依赖保留。
 
-## 当前主入口
+## 方法身份
 
-- 新方法说明与正式命令：[`code/registration_v3/README.md`](code/registration_v3/README.md)
-- 正式 PLC 训练：`code/registration_v3/scripts/train_plc.py`
-- 单对 NIfTI 推理：`code/registration_v3/scripts/infer_nifti.py`
-- Evaluation-only 标签传播：`code/registration_v3/scripts/evaluate_labels.py`
-- 冻结 PLC 审计契约：`data/PLC_PreRegistration_Analysis_v1`
-- 历史 `DualREG_PatentExperts`：只保留为 baseline，不与 v3 checkpoint/flow cache 混用
+V4-Core 采用输入分辨率的 Figure-9 风格特征提取、direct + dilated DNS、
+24 通道 feature-squeezing DSIR，以及 descriptor-agnostic ConvexAdam 求解链。
+完整实现说明见
+[`code/registration_v4_final/README.md`](code/registration_v4_final/README.md)。
 
-Registration v3 已具备显式候选对应、response-conditioned matching、可选 P/A/V
-relational training、三视图体推理、严格 flow provenance、checkpoint/resume、QA 与
-独立标签评价。代码与合成/CUDA 回归已闭环，但尚未完成 PLC/WAW 全量训练，不能把当前
-smoke 结果写成论文性能结果。
+## 冻结 public-8 结果
 
-当前目录没有 `.git`；正式运行会冻结配置、输入文件哈希、split/exclusion identity、
-源码树 SHA-256、RNG 及 last/best checkpoint。历史迁移清单见
-[`PROJECT_INVENTORY.md`](PROJECT_INVENTORY.md)。
+| 指标 | 数值 |
+|---|---:|
+| Mean Dice ↑ | `0.6633615210` |
+| ASSD (mm) ↓ | `8.234422` |
+| HD95 (mm) ↓ | `27.164855` |
+| Fold fraction ↓ | `0.000059382` |
+
+- 最佳验证 checkpoint：epoch `217`
+- 完整训练：epoch `299/299`
+- 冻结 checkpoint SHA-256：`6ba1c54ab260f4fb830b019caeaaf8414c1b45aae435adb4ff9eb68592d5bb70`
+
+冻结源代码、checkpoint、服务器路径和哈希清单见
+[`releases/v4_core_0p663361_frozen_20260827`](releases/v4_core_0p663361_frozen_20260827)。
+该目录是不可变基线，不应被后续实验覆盖。
+
+## 主要入口
+
+- 主代码：[`code/registration_v4_final`](code/registration_v4_final)
+- 内部依赖：[`code/registration_v4_pracm`](code/registration_v4_pracm)
+- 分支清单：[`git_manifests/registration_v4_core.md`](git_manifests/registration_v4_core.md)
+- 冻结发布说明：[`releases/v4_core_0p663361_frozen_20260827/README.md`](releases/v4_core_0p663361_frozen_20260827/README.md)
+
+本分支不代表 V5 的 DINO anchor、dense-corefix 路由或 `0.785949746` 结果。
+当前最佳完整版本请切换到
+[`registration_v5`](https://github.com/Mister-Ryder/registration/tree/registration_v5)。
 
