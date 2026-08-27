@@ -1,23 +1,45 @@
-# KidneyCT Registration Response
+# Registration V5（当前最佳完整版本）
 
-本项目包含多期相 CT 配准、增强响应分析及历史基线。论文升级方法已经独立实现为
-`code/registration_v3`，当前 package version 为 `0.4.0`。
+当前分支为 `registration_v5`。它把本轮最佳 MR--CT 配准方案整理为一个完整、
+可审计的方法包，而不是继续依赖多个增量实验目录。
 
-## 当前主入口
+## 方法身份
 
-- 新方法说明与正式命令：[`code/registration_v3/README.md`](code/registration_v3/README.md)
-- 正式 PLC 训练：`code/registration_v3/scripts/train_plc.py`
-- 单对 NIfTI 推理：`code/registration_v3/scripts/infer_nifti.py`
-- Evaluation-only 标签传播：`code/registration_v3/scripts/evaluate_labels.py`
-- 冻结 PLC 审计契约：`data/PLC_PreRegistration_Analysis_v1`
-- 历史 `DualREG_PatentExperts`：只保留为 baseline，不与 v3 checkpoint/flow cache 混用
+V5 由三部分形成一条明确的信息链：
 
-Registration v3 已具备显式候选对应、response-conditioned matching、可选 P/A/V
-relational training、三视图体推理、严格 flow provenance、checkpoint/resume、QA 与
-独立标签评价。代码与合成/CUDA 回归已闭环，但尚未完成 PLC/WAW 全量训练，不能把当前
-smoke 结果写成论文性能结果。
+1. 冻结的官方 B04 DINO-Reg 产生全局可靠 anchor；
+2. 冻结 V4-Core DSIR descriptor 与 dense-corefix 产生非刚性候选和 QA；
+3. 无标签 capture/topology/forward-backward router 在整例层面选择候选，并按原字节
+   保存最终 flow。
 
-当前目录没有 `.git`；正式运行会冻结配置、输入文件哈希、split/exclusion identity、
-源码树 SHA-256、RNG 及 last/best checkpoint。历史迁移清单见
-[`PROJECT_INVENTORY.md`](PROJECT_INVENTORY.md)。
+V5 自有代码全部位于 [`code/registration_v5`](code/registration_v5)，运行入口、
+flow 约定、路由条件和外部依赖说明见
+[`code/registration_v5/README.md`](code/registration_v5/README.md)。
+
+## 冻结 public-8 结果
+
+| 指标 | 数值 |
+|---|---:|
+| Mean Dice ↑ | `0.7859497458` |
+| ASSD (mm) ↓ | `4.577276` |
+| HD95 (mm) ↓ | `19.858701` |
+| Fold fraction ↓ | `0.026441595` |
+
+dense-corefix 用于病例 `0004`、`0014`，其余六例保留字节一致的 DINO anchor。
+该结果是当前已完成版本中的最佳值，但仍明确低于 `0.80` 和项目目标 `0.85`。
+
+## 代码与文档
+
+- 完整代码：[`code/registration_v5`](code/registration_v5)
+- 方法说明 TeX：[`code/registration_v5/docs/registration_v5_method_detail_v1.tex`](code/registration_v5/docs/registration_v5_method_detail_v1.tex)
+- 编译版 PDF：[`code/registration_v5/docs/registration_v5_method_detail_v1.pdf`](code/registration_v5/docs/registration_v5_method_detail_v1.pdf)
+- 版本身份：[`code/registration_v5/VERSION_MANIFEST.json`](code/registration_v5/VERSION_MANIFEST.json)
+- 分支清单：[`git_manifests/registration_v5.md`](git_manifests/registration_v5.md)
+
+官方 DINO-Reg 上游代码及 DINOv2 权重属于外部依赖，不能将其描述为 V5 新训练模型；
+冻结 V4-Core checkpoint 也通过 SHA-256 固定，不能由新训练结果静默替换。
+
+历史版本请切换到
+[`registration_v4_pracm`](https://github.com/Mister-Ryder/registration/tree/registration_v4_pracm)
+或 [`registration_v4_core`](https://github.com/Mister-Ryder/registration/tree/registration_v4_core)。
 
