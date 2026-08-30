@@ -1,18 +1,24 @@
-# Registration 方法版本仓库
+# Learn2Reg MR–CT protocol_300 结果分支
 
-本仓库用独立 Git 分支保存三个不同的方法身份。`main` 只负责版本导航，
-不代表任何一次训练、推理或实验结果；查看和复现实验时，请先切换到对应分支。
+当前分支 `results_l2r_protocol300` 只保存本轮正式的 B00–B12 public-8
+多方法对比结果。它不保存训练代码，也不把 V4/V5 自研探索冒充为成功方法。
 
-| 分支 | 方法身份 | 主代码目录 | 冻结 public-8 结果 |
-|---|---|---|---|
-| [`registration_v4_pracm`](https://github.com/Mister-Ryder/registration/tree/registration_v4_pracm) | 原始 3-D PRA-CM V4 开发线 | `code/registration_v4_pracm` | 历史开发版本，不作为当前最佳结果 |
-| [`registration_v4_core`](https://github.com/Mister-Ryder/registration/tree/registration_v4_core) | 忠实 DSIR / V4-Core 冻结线 | `code/registration_v4_final` | Dice `0.663361521` |
-| [`registration_v5`](https://github.com/Mister-Ryder/registration/tree/registration_v5) | DINO anchor + dense-corefix + 无标签路由的完整版本 | `code/registration_v5` | Dice `0.785949746` |
+## 结果入口
 
-每个方法分支的根 `README.md` 都只介绍该分支；完整的代码说明、运行入口、
-指标和边界条件继续保存在对应方法目录中。分支关系与保存原则见
-[`GIT_BRANCHES.md`](GIT_BRANCHES.md)。
+- 轻量结果包：[`results/L2R_MRCT_protocol300_20260825`](results/L2R_MRCT_protocol300_20260825)
+- 四项指标主表：[`aggregate/HEADLINE_BENCHMARK.md`](results/L2R_MRCT_protocol300_20260825/aggregate/HEADLINE_BENCHMARK.md)
+- 机器可读主表：[`aggregate/headline_benchmark_summary.csv`](results/L2R_MRCT_protocol300_20260825/aggregate/headline_benchmark_summary.csv)
+- 全部结果索引：[`RESULTS_INDEX.md`](RESULTS_INDEX.md)
 
-数据集、服务器完整导出、临时探针、大型归档和外部基础模型权重不纳入 Git。
-冻结 checkpoint 或结果快照仅在相应分支明确列出，并通过 manifest 与 SHA-256
-固定身份，不能跨版本混用。
+该轻量包包含主表、13 个方法的 summary/pair/organ/evaluation 文件、public-8
+协议清单、校正记录和完整性报告。每个方法均通过 8/8 pair、8/8 flow、8/8
+成功状态检查；32 个器官-病例请求中 30 个可评估。
+
+## 指标边界
+
+Mean Dice、ASSD、HD95 和 fold fraction 均按“缺失器官排除、四器官等权宏平均”
+计算。`0002`、`0004` 的 left-kidney reference 缺失，不记为 Dice=0。
+完整服务器导出、NIfTI/flow、checkpoint 和 TensorBoard 仍保留在本地原始归档，
+没有复制进 GitHub 结果分支。
+
+V4/V5 的失败和诊断路径见 `RESULTS_INDEX.md` 中的边界说明，不属于本分支的主表。

@@ -1,0 +1,144 @@
+{
+  "schema": "registration_pair_manifest_v1",
+  "dataset_id": "L2R-MRCT-P8",
+  "label_paths_present": false,
+  "pairs": [
+    {
+      "pair_id": "MR_fixed__CT_moving__0002_tcia",
+      "subject_id": "0002_tcia",
+      "split": "test",
+      "task_domain": "l2r_mrct",
+      "task_group": "mr_target",
+      "fixed": {
+        "path": "/autodl-fs/data/datasets/Learn2Reg_2021_MRCT/01_official_extracted/public_paired/Train/img0002_tcia_MR.nii.gz",
+        "phase": "mr",
+        "modality": "mr"
+      },
+      "moving": {
+        "path": "/autodl-fs/data/datasets/Learn2Reg_2021_MRCT/01_official_extracted/public_paired/Train/img0002_tcia_CT.nii.gz",
+        "phase": "ct",
+        "modality": "ct"
+      }
+    },
+    {
+      "pair_id": "MR_fixed__CT_moving__0004_tcia",
+      "subject_id": "0004_tcia",
+      "split": "test",
+      "task_domain": "l2r_mrct",
+      "task_group": "mr_target",
+      "fixed": {
+        "path": "/autodl-fs/data/datasets/Learn2Reg_2021_MRCT/01_official_extracted/public_paired/Train/img0004_tcia_MR.nii.gz",
+        "phase": "mr",
+        "modality": "mr"
+      },
+      "moving": {
+        "path": "/autodl-fs/data/datasets/Learn2Reg_2021_MRCT/01_official_extracted/public_paired/Train/img0004_tcia_CT.nii.gz",
+        "phase": "ct",
+        "modality": "ct"
+      }
+    },
+    {
+      "pair_id": "MR_fixed__CT_moving__0006_tcia",
+      "subject_id": "0006_tcia",
+      "split": "test",
+      "task_domain": "l2r_mrct",
+      "task_group": "mr_target",
+      "fixed": {
+        "path": "/autodl-fs/data/datasets/Learn2Reg_2021_MRCT/01_official_extracted/public_paired/Train/img0006_tcia_MR.nii.gz",
+        "phase": "mr",
+        "modality": "mr"
+      },
+      "moving": {
+        "path": "/autodl-fs/data/datasets/Learn2Reg_2021_MRCT/01_official_extracted/public_paired/Train/img0006_tcia_CT.nii.gz",
+        "phase": "ct",
+        "modality": "ct"
+      }
+    },
+    {
+      "pair_id": "MR_fixed__CT_moving__0008_tcia",
+      "subject_id": "0008_tcia",
+      "split": "test",
+      "task_domain": "l2r_mrct",
+      "task_group": "mr_target",
+      "fixed": {
+        "path": "/autodl-fs/data/datasets/Learn2Reg_2021_MRCT/01_official_extracted/public_paired/Train/img0008_tcia_MR.nii.gz",
+        "phase": "mr",
+        "modality": "mr"
+      },
+      "moving": {
+        "path": "/autodl-fs/data/datasets/Learn2Reg_2021_MRCT/01_official_extracted/public_paired/Train/img0008_tcia_CT.nii.gz",
+        "phase": "ct",
+        "modality": "ct"
+      }
+    },
+    {
+      "pair_id": "MR_fixed__CT_moving__0010_tcia",
+      "subject_id": "0010_tcia",
+      "split": "test",
+      "task_domain": "l2r_mrct",
+      "task_group": "mr_target",
+      "fixed": {
+        "path": "/autodl-fs/data/datasets/Learn2Reg_2021_MRCT/01_official_extracted/public_paired/Train/img0010_tcia_MR.nii.gz",
+        "phase": "mr",
+        "modality": "mr"
+      },
+      "moving": {
+        "path": "/autodl-fs/data/datasets/Learn2Reg_2021_MRCT/01_official_extracted/public_paired/Train/img0010_tcia_CT.nii.gz",
+        "phase": "ct",
+        "modality": "ct"
+      }
+    },
+    {
+      "pair_id": "MR_fixed__CT_moving__0012_tcia",
+      "subject_id": "0012_tcia",
+      "split": "test",
+      "task_domain": "l2r_mrct",
+      "task_group": "mr_target",
+      "fixed": {
+        "path": "/autodl-fs/data/datasets/Learn2Reg_2021_MRCT/01_official_extracted/public_paired/Train/img0012_tcia_MR.nii.gz",
+        "phase": "mr",
+        "modality": "mr"
+      },
+      "moving": {
+        "path": "/autodl-fs/data/datasets/Learn2Reg_2021_MRCT/01_official_extracted/public_paired/Train/img0012_tcia_CT.nii.gz",
+        "phase": "ct",
+        "modality": "ct"
+      }
+    },
+    {
+      "pair_id": "MR_fixed__CT_moving__0014_tcia",
+      "subject_id": "0014_tcia",
+      "split": "test",
+      "task_domain": "l2r_mrct",
+      "task_group": "mr_target",
+      "fixed": {
+        "path": "/autodl-fs/data/datasets/Learn2Reg_2021_MRCT/01_official_extracted/public_paired/Train/img0014_tcia_MR.nii.gz",
+        "phase": "mr",
+        "modality": "mr"
+      },
+      "moving": {
+        "path": "/autodl-fs/data/datasets/Learn2Reg_2021_MRCT/01_official_extracted/public_paired/Train/img0014_tcia_CT.nii.gz",
+        "phase": "ct",
+        "modality": "ct"
+      }
+    },
+    {
+      "pair_id": "MR_fixed__CT_moving__0016_tcia",
+      "subject_id": "0016_tcia",
+      "split": "test",
+      "task_domain": "l2r_mrct",
+      "task_group": "mr_target",
+      "fixed": {
+        "path": "/autodl-fs/data/datasets/Learn2Reg_2021_MRCT/01_official_extracted/public_paired/Train/img0016_tcia_MR.nii.gz",
+        "phase": "mr",
+        "modality": "mr"
+      },
+      "moving": {
+        "path": "/autodl-fs/data/datasets/Learn2Reg_2021_MRCT/01_official_extracted/public_paired/Train/img0016_tcia_CT.nii.gz",
+        "phase": "ct",
+        "modality": "ct"
+      }
+    }
+  ],
+  "content_sha256": "c55dee08c3c2b83261c02958d5765c6f1d131618514f0363b9df92dc03e8c2ef"
+}

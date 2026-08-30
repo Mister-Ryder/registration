@@ -1,0 +1,417 @@
+﻿assd_mm,availability_reason,dice,display_name,fixed_phase,hd95_mm,label_available,label_name,label_value,method_id,moving_phase,pair_id,source_server,subject_id,task_domain,task_group
+8.832050106584184,,0.6823498512713702,Identity,mr,20.0,True,liver,1,B00_identity,ct,MR_fixed__CT_moving__0002_tcia,server1,0002_tcia,l2r_mrct,mr_target
+6.610535384251207,,0.6056176293676977,Identity,mr,21.2602916254693,True,spleen,2,B00_identity,ct,MR_fixed__CT_moving__0002_tcia,server1,0002_tcia,l2r_mrct,mr_target
+8.39662602569391,,0.40082075057953764,Identity,mr,22.360679774997898,True,right_kidney,3,B00_identity,ct,MR_fixed__CT_moving__0002_tcia,server1,0002_tcia,l2r_mrct,mr_target
+nan,missing_in_fixed_or_moving_label,nan,Identity,mr,nan,False,left_kidney,4,B00_identity,ct,MR_fixed__CT_moving__0002_tcia,server1,0002_tcia,l2r_mrct,mr_target
+31.438783023986762,,0.3118863530644378,Identity,mr,75.49834435270749,True,liver,1,B00_identity,ct,MR_fixed__CT_moving__0004_tcia,server1,0004_tcia,l2r_mrct,mr_target
+44.06383996504015,,0.0,Identity,mr,72.99315036357864,True,spleen,2,B00_identity,ct,MR_fixed__CT_moving__0004_tcia,server1,0004_tcia,l2r_mrct,mr_target
+45.440240164181056,,0.0,Identity,mr,78.11017771289609,True,right_kidney,3,B00_identity,ct,MR_fixed__CT_moving__0004_tcia,server1,0004_tcia,l2r_mrct,mr_target
+nan,missing_in_fixed_or_moving_label,nan,Identity,mr,nan,False,left_kidney,4,B00_identity,ct,MR_fixed__CT_moving__0004_tcia,server1,0004_tcia,l2r_mrct,mr_target
+13.614170780626868,,0.55513042415406,Identity,mr,32.55764119219941,True,liver,1,B00_identity,ct,MR_fixed__CT_moving__0006_tcia,server1,0006_tcia,l2r_mrct,mr_target
+7.147566120968043,,0.5395298477939492,Identity,mr,24.413111231467404,True,spleen,2,B00_identity,ct,MR_fixed__CT_moving__0006_tcia,server1,0006_tcia,l2r_mrct,mr_target
+6.272934925889752,,0.4103697892522198,Identity,mr,16.24807680927192,True,right_kidney,3,B00_identity,ct,MR_fixed__CT_moving__0006_tcia,server1,0006_tcia,l2r_mrct,mr_target
+8.182317353504288,,0.3564791934367896,Identity,mr,26.90724809414742,True,left_kidney,4,B00_identity,ct,MR_fixed__CT_moving__0006_tcia,server1,0006_tcia,l2r_mrct,mr_target
+13.590258923821981,,0.6070387823103768,Identity,mr,29.732137494637012,True,liver,1,B00_identity,ct,MR_fixed__CT_moving__0008_tcia,server1,0008_tcia,l2r_mrct,mr_target
+8.346682630928367,,0.6152261331479919,Identity,mr,22.090722034374522,True,spleen,2,B00_identity,ct,MR_fixed__CT_moving__0008_tcia,server1,0008_tcia,l2r_mrct,mr_target
+5.897183466409204,,0.4854727737369766,Identity,mr,19.364864952745464,True,right_kidney,3,B00_identity,ct,MR_fixed__CT_moving__0008_tcia,server1,0008_tcia,l2r_mrct,mr_target
+6.770798395934614,,0.48042598169235984,Identity,mr,20.97617696340303,True,left_kidney,4,B00_identity,ct,MR_fixed__CT_moving__0008_tcia,server1,0008_tcia,l2r_mrct,mr_target
+17.68003486892593,,0.41514939224763653,Identity,mr,47.41307836451879,True,liver,1,B00_identity,ct,MR_fixed__CT_moving__0010_tcia,server1,0010_tcia,l2r_mrct,mr_target
+14.226582548508663,,0.39503590876805306,Identity,mr,38.67815921162743,True,spleen,2,B00_identity,ct,MR_fixed__CT_moving__0010_tcia,server1,0010_tcia,l2r_mrct,mr_target
+8.788704789420294,,0.46470429138117564,Identity,mr,33.52610922848042,True,right_kidney,3,B00_identity,ct,MR_fixed__CT_moving__0010_tcia,server1,0010_tcia,l2r_mrct,mr_target
+15.28543726354219,,0.23418556952257175,Identity,mr,37.94733192202055,True,left_kidney,4,B00_identity,ct,MR_fixed__CT_moving__0010_tcia,server1,0010_tcia,l2r_mrct,mr_target
+23.336216903520228,,0.38029771302890947,Identity,mr,55.06359959174482,True,liver,1,B00_identity,ct,MR_fixed__CT_moving__0012_tcia,server1,0012_tcia,l2r_mrct,mr_target
+16.24148462453463,,0.10800774099063759,Identity,mr,44.0,True,spleen,2,B00_identity,ct,MR_fixed__CT_moving__0012_tcia,server1,0012_tcia,l2r_mrct,mr_target
+13.76995544739783,,0.24689227450451665,Identity,mr,41.6773267913066,True,right_kidney,3,B00_identity,ct,MR_fixed__CT_moving__0012_tcia,server1,0012_tcia,l2r_mrct,mr_target
+12.359697666247406,,0.25321340112110546,Identity,mr,37.926220708986165,True,left_kidney,4,B00_identity,ct,MR_fixed__CT_moving__0012_tcia,server1,0012_tcia,l2r_mrct,mr_target
+18.04409222702882,,0.38670889441683753,Identity,mr,40.93897898091744,True,liver,1,B00_identity,ct,MR_fixed__CT_moving__0014_tcia,server1,0014_tcia,l2r_mrct,mr_target
+28.052320837609226,,0.2193459039096623,Identity,mr,81.2896057316063,True,spleen,2,B00_identity,ct,MR_fixed__CT_moving__0014_tcia,server1,0014_tcia,l2r_mrct,mr_target
+27.796135409610415,,0.06858693251727292,Identity,mr,72.69112738154499,True,right_kidney,3,B00_identity,ct,MR_fixed__CT_moving__0014_tcia,server1,0014_tcia,l2r_mrct,mr_target
+27.93129200403523,,0.1053988326848249,Identity,mr,76.10519036176179,True,left_kidney,4,B00_identity,ct,MR_fixed__CT_moving__0014_tcia,server1,0014_tcia,l2r_mrct,mr_target
+8.453856577641229,,0.7375647726119239,Identity,mr,18.867962264113206,True,liver,1,B00_identity,ct,MR_fixed__CT_moving__0016_tcia,server1,0016_tcia,l2r_mrct,mr_target
+8.399480463646064,,0.49024404797422283,Identity,mr,18.867962264113206,True,spleen,2,B00_identity,ct,MR_fixed__CT_moving__0016_tcia,server1,0016_tcia,l2r_mrct,mr_target
+9.184712897815608,,0.37067895390182837,Identity,mr,27.712812921102035,True,right_kidney,3,B00_identity,ct,MR_fixed__CT_moving__0016_tcia,server1,0016_tcia,l2r_mrct,mr_target
+9.408977163589906,,0.3484702713103714,Identity,mr,30.01331855134915,True,left_kidney,4,B00_identity,ct,MR_fixed__CT_moving__0016_tcia,server1,0016_tcia,l2r_mrct,mr_target
+2.689217338712414,,0.8819371261992418,ANTs-SyN + MI,mr,10.198039027185569,True,liver,1,B01_ants_syn_mi,ct,MR_fixed__CT_moving__0002_tcia,server2,0002_tcia,l2r_mrct,mr_target
+5.031746954766605,,0.6986643294019016,ANTs-SyN + MI,mr,20.14441762775883,True,spleen,2,B01_ants_syn_mi,ct,MR_fixed__CT_moving__0002_tcia,server2,0002_tcia,l2r_mrct,mr_target
+1.5880689446439313,,0.8895355045381741,ANTs-SyN + MI,mr,7.211102550927978,True,right_kidney,3,B01_ants_syn_mi,ct,MR_fixed__CT_moving__0002_tcia,server2,0002_tcia,l2r_mrct,mr_target
+nan,missing_in_fixed_or_moving_label,nan,ANTs-SyN + MI,mr,nan,False,left_kidney,4,B01_ants_syn_mi,ct,MR_fixed__CT_moving__0002_tcia,server2,0002_tcia,l2r_mrct,mr_target
+29.537579455214974,,0.3563954460038398,ANTs-SyN + MI,mr,70.79548008171143,True,liver,1,B01_ants_syn_mi,ct,MR_fixed__CT_moving__0004_tcia,server2,0004_tcia,l2r_mrct,mr_target
+31.079078264493177,,0.029536082474226805,ANTs-SyN + MI,mr,58.240879114244144,True,spleen,2,B01_ants_syn_mi,ct,MR_fixed__CT_moving__0004_tcia,server2,0004_tcia,l2r_mrct,mr_target
+43.53975062224673,,0.0,ANTs-SyN + MI,mr,72.91090453423274,True,right_kidney,3,B01_ants_syn_mi,ct,MR_fixed__CT_moving__0004_tcia,server2,0004_tcia,l2r_mrct,mr_target
+nan,missing_in_fixed_or_moving_label,nan,ANTs-SyN + MI,mr,nan,False,left_kidney,4,B01_ants_syn_mi,ct,MR_fixed__CT_moving__0004_tcia,server2,0004_tcia,l2r_mrct,mr_target
+10.064436103906257,,0.658887173511583,ANTs-SyN + MI,mr,32.61901286060018,True,liver,1,B01_ants_syn_mi,ct,MR_fixed__CT_moving__0006_tcia,server2,0006_tcia,l2r_mrct,mr_target
+5.498460509271022,,0.5901616204389866,ANTs-SyN + MI,mr,16.24807680927192,True,spleen,2,B01_ants_syn_mi,ct,MR_fixed__CT_moving__0006_tcia,server2,0006_tcia,l2r_mrct,mr_target
+4.3229937045429665,,0.5449697831496623,ANTs-SyN + MI,mr,14.0,True,right_kidney,3,B01_ants_syn_mi,ct,MR_fixed__CT_moving__0006_tcia,server2,0006_tcia,l2r_mrct,mr_target
+7.954608613859939,,0.32744196354368665,ANTs-SyN + MI,mr,26.153393661244042,True,left_kidney,4,B01_ants_syn_mi,ct,MR_fixed__CT_moving__0006_tcia,server2,0006_tcia,l2r_mrct,mr_target
+3.500957480067138,,0.8887001440037681,ANTs-SyN + MI,mr,15.748015748023622,True,liver,1,B01_ants_syn_mi,ct,MR_fixed__CT_moving__0008_tcia,server2,0008_tcia,l2r_mrct,mr_target
+3.513452870081305,,0.8091885690446391,ANTs-SyN + MI,mr,17.549928774784245,True,spleen,2,B01_ants_syn_mi,ct,MR_fixed__CT_moving__0008_tcia,server2,0008_tcia,l2r_mrct,mr_target
+1.0953248899821018,,0.904471179745017,ANTs-SyN + MI,mr,2.8284271247461903,True,right_kidney,3,B01_ants_syn_mi,ct,MR_fixed__CT_moving__0008_tcia,server2,0008_tcia,l2r_mrct,mr_target
+1.1230970022644016,,0.9104916654993697,ANTs-SyN + MI,mr,4.0,True,left_kidney,4,B01_ants_syn_mi,ct,MR_fixed__CT_moving__0008_tcia,server2,0008_tcia,l2r_mrct,mr_target
+3.27927648124691,,0.865190581083162,ANTs-SyN + MI,mr,9.16515138991168,True,liver,1,B01_ants_syn_mi,ct,MR_fixed__CT_moving__0010_tcia,server2,0010_tcia,l2r_mrct,mr_target
+2.057868743467813,,0.8740948901690787,ANTs-SyN + MI,mr,6.6332495807108,True,spleen,2,B01_ants_syn_mi,ct,MR_fixed__CT_moving__0010_tcia,server2,0010_tcia,l2r_mrct,mr_target
+5.594047623675255,,0.6102290515286075,ANTs-SyN + MI,mr,15.620499351813308,True,right_kidney,3,B01_ants_syn_mi,ct,MR_fixed__CT_moving__0010_tcia,server2,0010_tcia,l2r_mrct,mr_target
+5.4766824352423145,,0.61564278418211,ANTs-SyN + MI,mr,18.0,True,left_kidney,4,B01_ants_syn_mi,ct,MR_fixed__CT_moving__0010_tcia,server2,0010_tcia,l2r_mrct,mr_target
+8.378005514243554,,0.7230741452044451,ANTs-SyN + MI,mr,28.982753492378876,True,liver,1,B01_ants_syn_mi,ct,MR_fixed__CT_moving__0012_tcia,server2,0012_tcia,l2r_mrct,mr_target
+5.643030419214087,,0.5217837444952755,ANTs-SyN + MI,mr,18.867962264113206,True,spleen,2,B01_ants_syn_mi,ct,MR_fixed__CT_moving__0012_tcia,server2,0012_tcia,l2r_mrct,mr_target
+14.589146949647294,,0.19011631727672998,ANTs-SyN + MI,mr,33.52610922848042,True,right_kidney,3,B01_ants_syn_mi,ct,MR_fixed__CT_moving__0012_tcia,server2,0012_tcia,l2r_mrct,mr_target
+11.311845894369748,,0.2849980208470774,ANTs-SyN + MI,mr,31.304951684997057,True,left_kidney,4,B01_ants_syn_mi,ct,MR_fixed__CT_moving__0012_tcia,server2,0012_tcia,l2r_mrct,mr_target
+14.041167552392622,,0.503060070825456,ANTs-SyN + MI,mr,35.38361202590826,True,liver,1,B01_ants_syn_mi,ct,MR_fixed__CT_moving__0014_tcia,server2,0014_tcia,l2r_mrct,mr_target
+28.615031034137544,,0.18364733857691604,ANTs-SyN + MI,mr,79.22120928135344,True,spleen,2,B01_ants_syn_mi,ct,MR_fixed__CT_moving__0014_tcia,server2,0014_tcia,l2r_mrct,mr_target
+27.256284790187593,,0.04521977082264409,ANTs-SyN + MI,mr,75.73638491504595,True,right_kidney,3,B01_ants_syn_mi,ct,MR_fixed__CT_moving__0014_tcia,server2,0014_tcia,l2r_mrct,mr_target
+23.472442404886976,,0.1466731923443497,ANTs-SyN + MI,mr,74.40294698503135,True,left_kidney,4,B01_ants_syn_mi,ct,MR_fixed__CT_moving__0014_tcia,server2,0014_tcia,l2r_mrct,mr_target
+3.924381543988141,,0.862344811488205,ANTs-SyN + MI,mr,15.362291495737216,True,liver,1,B01_ants_syn_mi,ct,MR_fixed__CT_moving__0016_tcia,server2,0016_tcia,l2r_mrct,mr_target
+2.5854799236407233,,0.8321361270220348,ANTs-SyN + MI,mr,14.560219778561036,True,spleen,2,B01_ants_syn_mi,ct,MR_fixed__CT_moving__0016_tcia,server2,0016_tcia,l2r_mrct,mr_target
+2.7358114547944288,,0.8103806096608975,ANTs-SyN + MI,mr,15.0996688705415,True,right_kidney,3,B01_ants_syn_mi,ct,MR_fixed__CT_moving__0016_tcia,server2,0016_tcia,l2r_mrct,mr_target
+3.162591584135511,,0.7898123205022597,ANTs-SyN + MI,mr,18.439088914585774,True,left_kidney,4,B01_ants_syn_mi,ct,MR_fixed__CT_moving__0016_tcia,server2,0016_tcia,l2r_mrct,mr_target
+3.233599027265301,,0.8595109591656109,ConvexAdam + MIND-SSC,mr,12.806248474865697,True,liver,1,B02_convexadam_mind,ct,MR_fixed__CT_moving__0002_tcia,server1,0002_tcia,l2r_mrct,mr_target
+9.107591502122833,,0.5127890255134192,ConvexAdam + MIND-SSC,mr,29.732137494637012,True,spleen,2,B02_convexadam_mind,ct,MR_fixed__CT_moving__0002_tcia,server1,0002_tcia,l2r_mrct,mr_target
+1.5251137302638087,,0.8936245976854071,ConvexAdam + MIND-SSC,mr,7.483314773547883,True,right_kidney,3,B02_convexadam_mind,ct,MR_fixed__CT_moving__0002_tcia,server1,0002_tcia,l2r_mrct,mr_target
+nan,missing_in_fixed_or_moving_label,nan,ConvexAdam + MIND-SSC,mr,nan,False,left_kidney,4,B02_convexadam_mind,ct,MR_fixed__CT_moving__0002_tcia,server1,0002_tcia,l2r_mrct,mr_target
+23.035426007556403,,0.46903771332929184,ConvexAdam + MIND-SSC,mr,59.39696961966999,True,liver,1,B02_convexadam_mind,ct,MR_fixed__CT_moving__0004_tcia,server1,0004_tcia,l2r_mrct,mr_target
+36.24071880262145,,0.004027864901449371,ConvexAdam + MIND-SSC,mr,62.12889826803627,True,spleen,2,B02_convexadam_mind,ct,MR_fixed__CT_moving__0004_tcia,server1,0004_tcia,l2r_mrct,mr_target
+25.564248479441726,,0.05814689958116253,ConvexAdam + MIND-SSC,mr,55.00908715413025,True,right_kidney,3,B02_convexadam_mind,ct,MR_fixed__CT_moving__0004_tcia,server1,0004_tcia,l2r_mrct,mr_target
+nan,missing_in_fixed_or_moving_label,nan,ConvexAdam + MIND-SSC,mr,nan,False,left_kidney,4,B02_convexadam_mind,ct,MR_fixed__CT_moving__0004_tcia,server1,0004_tcia,l2r_mrct,mr_target
+11.256409417132598,,0.6620282769807649,ConvexAdam + MIND-SSC,mr,38.0,True,liver,1,B02_convexadam_mind,ct,MR_fixed__CT_moving__0006_tcia,server1,0006_tcia,l2r_mrct,mr_target
+2.810040082682403,,0.7913156859904381,ConvexAdam + MIND-SSC,mr,10.0,True,spleen,2,B02_convexadam_mind,ct,MR_fixed__CT_moving__0006_tcia,server1,0006_tcia,l2r_mrct,mr_target
+2.6503363112759093,,0.7594862528690726,ConvexAdam + MIND-SSC,mr,10.198039027185569,True,right_kidney,3,B02_convexadam_mind,ct,MR_fixed__CT_moving__0006_tcia,server1,0006_tcia,l2r_mrct,mr_target
+3.275989698122165,,0.6987134502923976,ConvexAdam + MIND-SSC,mr,18.76166303929372,True,left_kidney,4,B02_convexadam_mind,ct,MR_fixed__CT_moving__0006_tcia,server1,0006_tcia,l2r_mrct,mr_target
+2.0459739092263023,,0.9315030911175001,ConvexAdam + MIND-SSC,mr,7.483314773547883,True,liver,1,B02_convexadam_mind,ct,MR_fixed__CT_moving__0008_tcia,server1,0008_tcia,l2r_mrct,mr_target
+1.9682685731104326,,0.8898447861777252,ConvexAdam + MIND-SSC,mr,10.198039027185569,True,spleen,2,B02_convexadam_mind,ct,MR_fixed__CT_moving__0008_tcia,server1,0008_tcia,l2r_mrct,mr_target
+1.1521950157758984,,0.899481828380135,ConvexAdam + MIND-SSC,mr,3.4641016151377544,True,right_kidney,3,B02_convexadam_mind,ct,MR_fixed__CT_moving__0008_tcia,server1,0008_tcia,l2r_mrct,mr_target
+1.0871128741682086,,0.9081209879616623,ConvexAdam + MIND-SSC,mr,3.4641016151377544,True,left_kidney,4,B02_convexadam_mind,ct,MR_fixed__CT_moving__0008_tcia,server1,0008_tcia,l2r_mrct,mr_target
+4.345984301568586,,0.8368413920464394,ConvexAdam + MIND-SSC,mr,30.0,True,liver,1,B02_convexadam_mind,ct,MR_fixed__CT_moving__0010_tcia,server1,0010_tcia,l2r_mrct,mr_target
+1.1245231263443478,,0.9264468153895894,ConvexAdam + MIND-SSC,mr,3.4641016151377544,True,spleen,2,B02_convexadam_mind,ct,MR_fixed__CT_moving__0010_tcia,server1,0010_tcia,l2r_mrct,mr_target
+1.4513228714803776,,0.890843183609141,ConvexAdam + MIND-SSC,mr,8.48528137423857,True,right_kidney,3,B02_convexadam_mind,ct,MR_fixed__CT_moving__0010_tcia,server1,0010_tcia,l2r_mrct,mr_target
+1.225792006282421,,0.9029937406180077,ConvexAdam + MIND-SSC,mr,4.0,True,left_kidney,4,B02_convexadam_mind,ct,MR_fixed__CT_moving__0010_tcia,server1,0010_tcia,l2r_mrct,mr_target
+2.215301748786101,,0.9233890402053421,ConvexAdam + MIND-SSC,mr,8.246211251235321,True,liver,1,B02_convexadam_mind,ct,MR_fixed__CT_moving__0012_tcia,server1,0012_tcia,l2r_mrct,mr_target
+1.6029924384878853,,0.8341724354940214,ConvexAdam + MIND-SSC,mr,6.0,True,spleen,2,B02_convexadam_mind,ct,MR_fixed__CT_moving__0012_tcia,server1,0012_tcia,l2r_mrct,mr_target
+3.424089851313048,,0.7096509614508338,ConvexAdam + MIND-SSC,mr,18.547236990991408,True,right_kidney,3,B02_convexadam_mind,ct,MR_fixed__CT_moving__0012_tcia,server1,0012_tcia,l2r_mrct,mr_target
+2.9174666288497417,,0.7511072478165487,ConvexAdam + MIND-SSC,mr,19.697715603592208,True,left_kidney,4,B02_convexadam_mind,ct,MR_fixed__CT_moving__0012_tcia,server1,0012_tcia,l2r_mrct,mr_target
+5.615860838088665,,0.814854949768597,ConvexAdam + MIND-SSC,mr,28.635642126552707,True,liver,1,B02_convexadam_mind,ct,MR_fixed__CT_moving__0014_tcia,server1,0014_tcia,l2r_mrct,mr_target
+19.990806870297533,,0.372415147215008,ConvexAdam + MIND-SSC,mr,57.3410847473258,True,spleen,2,B02_convexadam_mind,ct,MR_fixed__CT_moving__0014_tcia,server1,0014_tcia,l2r_mrct,mr_target
+4.4755165214059165,,0.7090597224387962,ConvexAdam + MIND-SSC,mr,31.622776601683793,True,right_kidney,3,B02_convexadam_mind,ct,MR_fixed__CT_moving__0014_tcia,server1,0014_tcia,l2r_mrct,mr_target
+12.552144103389537,,0.4481048368749147,ConvexAdam + MIND-SSC,mr,46.84655361104341,True,left_kidney,4,B02_convexadam_mind,ct,MR_fixed__CT_moving__0014_tcia,server1,0014_tcia,l2r_mrct,mr_target
+3.9084559147646054,,0.8589717086255666,ConvexAdam + MIND-SSC,mr,14.142135623730951,True,liver,1,B02_convexadam_mind,ct,MR_fixed__CT_moving__0016_tcia,server1,0016_tcia,l2r_mrct,mr_target
+1.4296548405465814,,0.8963393895999284,ConvexAdam + MIND-SSC,mr,4.47213595499958,True,spleen,2,B02_convexadam_mind,ct,MR_fixed__CT_moving__0016_tcia,server1,0016_tcia,l2r_mrct,mr_target
+1.2926745218487006,,0.8922582474714056,ConvexAdam + MIND-SSC,mr,4.0,True,right_kidney,3,B02_convexadam_mind,ct,MR_fixed__CT_moving__0016_tcia,server1,0016_tcia,l2r_mrct,mr_target
+1.4645415551503134,,0.8845872899926954,ConvexAdam + MIND-SSC,mr,5.656854249492381,True,left_kidney,4,B02_convexadam_mind,ct,MR_fixed__CT_moving__0016_tcia,server1,0016_tcia,l2r_mrct,mr_target
+5.09182887171278,,0.7922583651022008,FireANTs,mr,16.0,True,liver,1,B03_fireants,ct,MR_fixed__CT_moving__0002_tcia,server2,0002_tcia,l2r_mrct,mr_target
+5.205828606310675,,0.6777659435319618,FireANTs,mr,15.620499351813308,True,spleen,2,B03_fireants,ct,MR_fixed__CT_moving__0002_tcia,server2,0002_tcia,l2r_mrct,mr_target
+4.081603377044959,,0.7348545959174745,FireANTs,mr,12.806248474865697,True,right_kidney,3,B03_fireants,ct,MR_fixed__CT_moving__0002_tcia,server2,0002_tcia,l2r_mrct,mr_target
+nan,missing_in_fixed_or_moving_label,nan,FireANTs,mr,nan,False,left_kidney,4,B03_fireants,ct,MR_fixed__CT_moving__0002_tcia,server2,0002_tcia,l2r_mrct,mr_target
+30.970929768736895,,0.3153711304431069,FireANTs,mr,77.17512552629896,True,liver,1,B03_fireants,ct,MR_fixed__CT_moving__0004_tcia,server2,0004_tcia,l2r_mrct,mr_target
+40.05199571027373,,0.0006534346156987666,FireANTs,mr,69.07966415668217,True,spleen,2,B03_fireants,ct,MR_fixed__CT_moving__0004_tcia,server2,0004_tcia,l2r_mrct,mr_target
+45.97079478942999,,0.0,FireANTs,mr,80.39900496896712,True,right_kidney,3,B03_fireants,ct,MR_fixed__CT_moving__0004_tcia,server2,0004_tcia,l2r_mrct,mr_target
+nan,missing_in_fixed_or_moving_label,nan,FireANTs,mr,nan,False,left_kidney,4,B03_fireants,ct,MR_fixed__CT_moving__0004_tcia,server2,0004_tcia,l2r_mrct,mr_target
+12.505052559030673,,0.5715103889184869,FireANTs,mr,33.52610922848042,True,liver,1,B03_fireants,ct,MR_fixed__CT_moving__0006_tcia,server2,0006_tcia,l2r_mrct,mr_target
+7.796212934270678,,0.5003969199015639,FireANTs,mr,28.705400188814647,True,spleen,2,B03_fireants,ct,MR_fixed__CT_moving__0006_tcia,server2,0006_tcia,l2r_mrct,mr_target
+5.580907934598917,,0.40249118331207323,FireANTs,mr,16.1245154965971,True,right_kidney,3,B03_fireants,ct,MR_fixed__CT_moving__0006_tcia,server2,0006_tcia,l2r_mrct,mr_target
+8.371822509751235,,0.2621638449906603,FireANTs,mr,24.73863375370596,True,left_kidney,4,B03_fireants,ct,MR_fixed__CT_moving__0006_tcia,server2,0006_tcia,l2r_mrct,mr_target
+8.024262184365945,,0.7626114986845328,FireANTs,mr,26.0,True,liver,1,B03_fireants,ct,MR_fixed__CT_moving__0008_tcia,server2,0008_tcia,l2r_mrct,mr_target
+5.643728794282033,,0.72656649538514,FireANTs,mr,19.390719429665317,True,spleen,2,B03_fireants,ct,MR_fixed__CT_moving__0008_tcia,server2,0008_tcia,l2r_mrct,mr_target
+2.9347541093278378,,0.7488519427939495,FireANTs,mr,12.328828005937952,True,right_kidney,3,B03_fireants,ct,MR_fixed__CT_moving__0008_tcia,server2,0008_tcia,l2r_mrct,mr_target
+4.428137655817695,,0.6417036737989503,FireANTs,mr,18.0,True,left_kidney,4,B03_fireants,ct,MR_fixed__CT_moving__0008_tcia,server2,0008_tcia,l2r_mrct,mr_target
+12.744811794723763,,0.5730752586647783,FireANTs,mr,43.12771730569565,True,liver,1,B03_fireants,ct,MR_fixed__CT_moving__0010_tcia,server2,0010_tcia,l2r_mrct,mr_target
+8.835463561796356,,0.5955830657611493,FireANTs,mr,32.37282811247729,True,spleen,2,B03_fireants,ct,MR_fixed__CT_moving__0010_tcia,server2,0010_tcia,l2r_mrct,mr_target
+6.458942599135502,,0.5743310702875399,FireANTs,mr,26.832815729997478,True,right_kidney,3,B03_fireants,ct,MR_fixed__CT_moving__0010_tcia,server2,0010_tcia,l2r_mrct,mr_target
+9.87054761927218,,0.4239440676634633,FireANTs,mr,26.68332812825267,True,left_kidney,4,B03_fireants,ct,MR_fixed__CT_moving__0010_tcia,server2,0010_tcia,l2r_mrct,mr_target
+19.180287854288657,,0.48042597943818677,FireANTs,mr,41.569219381653056,True,liver,1,B03_fireants,ct,MR_fixed__CT_moving__0012_tcia,server2,0012_tcia,l2r_mrct,mr_target
+14.202702862807985,,0.19814490422996295,FireANTs,mr,40.049968789001575,True,spleen,2,B03_fireants,ct,MR_fixed__CT_moving__0012_tcia,server2,0012_tcia,l2r_mrct,mr_target
+13.782851341089952,,0.24371851895490293,FireANTs,mr,40.54626986542659,True,right_kidney,3,B03_fireants,ct,MR_fixed__CT_moving__0012_tcia,server2,0012_tcia,l2r_mrct,mr_target
+11.809521949977343,,0.2984771573604061,FireANTs,mr,39.64845520319802,True,left_kidney,4,B03_fireants,ct,MR_fixed__CT_moving__0012_tcia,server2,0012_tcia,l2r_mrct,mr_target
+18.71707426311326,,0.3568799083769634,FireANTs,mr,41.376321731154405,True,liver,1,B03_fireants,ct,MR_fixed__CT_moving__0014_tcia,server2,0014_tcia,l2r_mrct,mr_target
+30.223785148699392,,0.17578898500194226,FireANTs,mr,81.65782265037441,True,spleen,2,B03_fireants,ct,MR_fixed__CT_moving__0014_tcia,server2,0014_tcia,l2r_mrct,mr_target
+31.377639621357098,,0.023201376936316697,FireANTs,mr,76.6550715869472,True,right_kidney,3,B03_fireants,ct,MR_fixed__CT_moving__0014_tcia,server2,0014_tcia,l2r_mrct,mr_target
+29.5929529989781,,0.08291583166332665,FireANTs,mr,79.04429138147802,True,left_kidney,4,B03_fireants,ct,MR_fixed__CT_moving__0014_tcia,server2,0014_tcia,l2r_mrct,mr_target
+5.128389770916917,,0.8308545007551357,FireANTs,mr,12.806248474865697,True,liver,1,B03_fireants,ct,MR_fixed__CT_moving__0016_tcia,server2,0016_tcia,l2r_mrct,mr_target
+2.659513140335619,,0.8285315574711628,FireANTs,mr,11.661903789690601,True,spleen,2,B03_fireants,ct,MR_fixed__CT_moving__0016_tcia,server2,0016_tcia,l2r_mrct,mr_target
+4.271592344699633,,0.711796575613992,FireANTs,mr,16.492422502470642,True,right_kidney,3,B03_fireants,ct,MR_fixed__CT_moving__0016_tcia,server2,0016_tcia,l2r_mrct,mr_target
+4.108759506955651,,0.7298098726670155,FireANTs,mr,22.0,True,left_kidney,4,B03_fireants,ct,MR_fixed__CT_moving__0016_tcia,server2,0016_tcia,l2r_mrct,mr_target
+3.4474021020403463,,0.8436920353649007,DINO-Reg,mr,14.0,True,liver,1,B04_dino_reg,ct,MR_fixed__CT_moving__0002_tcia,server1,0002_tcia,l2r_mrct,mr_target
+5.527124808278419,,0.737956193421507,DINO-Reg,mr,37.62711609503641,True,spleen,2,B04_dino_reg,ct,MR_fixed__CT_moving__0002_tcia,server1,0002_tcia,l2r_mrct,mr_target
+1.8990185891482718,,0.8658715671877358,DINO-Reg,mr,7.211102550927978,True,right_kidney,3,B04_dino_reg,ct,MR_fixed__CT_moving__0002_tcia,server1,0002_tcia,l2r_mrct,mr_target
+nan,missing_in_fixed_or_moving_label,nan,DINO-Reg,mr,nan,False,left_kidney,4,B04_dino_reg,ct,MR_fixed__CT_moving__0002_tcia,server1,0002_tcia,l2r_mrct,mr_target
+13.22467760377522,,0.6801500195052733,DINO-Reg,mr,51.73006862551025,True,liver,1,B04_dino_reg,ct,MR_fixed__CT_moving__0004_tcia,server1,0004_tcia,l2r_mrct,mr_target
+30.65962019626794,,0.03584818329090488,DINO-Reg,mr,64.65291950097846,True,spleen,2,B04_dino_reg,ct,MR_fixed__CT_moving__0004_tcia,server1,0004_tcia,l2r_mrct,mr_target
+8.906448007850493,,0.5399367563755488,DINO-Reg,mr,41.43910606008777,True,right_kidney,3,B04_dino_reg,ct,MR_fixed__CT_moving__0004_tcia,server1,0004_tcia,l2r_mrct,mr_target
+nan,missing_in_fixed_or_moving_label,nan,DINO-Reg,mr,nan,False,left_kidney,4,B04_dino_reg,ct,MR_fixed__CT_moving__0004_tcia,server1,0004_tcia,l2r_mrct,mr_target
+6.334999158244704,,0.7334565601288545,DINO-Reg,mr,29.393876913398138,True,liver,1,B04_dino_reg,ct,MR_fixed__CT_moving__0006_tcia,server1,0006_tcia,l2r_mrct,mr_target
+3.5213088472577447,,0.7453468541983753,DINO-Reg,mr,16.0,True,spleen,2,B04_dino_reg,ct,MR_fixed__CT_moving__0006_tcia,server1,0006_tcia,l2r_mrct,mr_target
+2.6445817892094565,,0.7675580370261534,DINO-Reg,mr,8.246211251235321,True,right_kidney,3,B04_dino_reg,ct,MR_fixed__CT_moving__0006_tcia,server1,0006_tcia,l2r_mrct,mr_target
+1.9015900361109699,,0.7963948619686324,DINO-Reg,mr,6.0,True,left_kidney,4,B04_dino_reg,ct,MR_fixed__CT_moving__0006_tcia,server1,0006_tcia,l2r_mrct,mr_target
+2.6813578850158533,,0.9089115434869695,DINO-Reg,mr,10.0,True,liver,1,B04_dino_reg,ct,MR_fixed__CT_moving__0008_tcia,server1,0008_tcia,l2r_mrct,mr_target
+2.3692627923628597,,0.861204486548278,DINO-Reg,mr,8.48528137423857,True,spleen,2,B04_dino_reg,ct,MR_fixed__CT_moving__0008_tcia,server1,0008_tcia,l2r_mrct,mr_target
+1.2826441388235406,,0.8882927500343927,DINO-Reg,mr,4.0,True,right_kidney,3,B04_dino_reg,ct,MR_fixed__CT_moving__0008_tcia,server1,0008_tcia,l2r_mrct,mr_target
+1.2437281624413075,,0.8945947340361498,DINO-Reg,mr,4.0,True,left_kidney,4,B04_dino_reg,ct,MR_fixed__CT_moving__0008_tcia,server1,0008_tcia,l2r_mrct,mr_target
+11.655325931002052,,0.6353936709488383,DINO-Reg,mr,74.18894796396563,True,liver,1,B04_dino_reg,ct,MR_fixed__CT_moving__0010_tcia,server1,0010_tcia,l2r_mrct,mr_target
+1.9444013759652778,,0.8880792147113036,DINO-Reg,mr,10.0,True,spleen,2,B04_dino_reg,ct,MR_fixed__CT_moving__0010_tcia,server1,0010_tcia,l2r_mrct,mr_target
+1.6205672290309232,,0.8750785810507409,DINO-Reg,mr,8.717797887081348,True,right_kidney,3,B04_dino_reg,ct,MR_fixed__CT_moving__0010_tcia,server1,0010_tcia,l2r_mrct,mr_target
+1.5987461928590827,,0.8775696034877625,DINO-Reg,mr,6.0,True,left_kidney,4,B04_dino_reg,ct,MR_fixed__CT_moving__0010_tcia,server1,0010_tcia,l2r_mrct,mr_target
+6.164843108007705,,0.813273659969175,DINO-Reg,mr,50.11985634456667,True,liver,1,B04_dino_reg,ct,MR_fixed__CT_moving__0012_tcia,server1,0012_tcia,l2r_mrct,mr_target
+1.9808770913361606,,0.7843379542031895,DINO-Reg,mr,6.928203230275509,True,spleen,2,B04_dino_reg,ct,MR_fixed__CT_moving__0012_tcia,server1,0012_tcia,l2r_mrct,mr_target
+1.6572893342910995,,0.8480814408770556,DINO-Reg,mr,5.656854249492381,True,right_kidney,3,B04_dino_reg,ct,MR_fixed__CT_moving__0012_tcia,server1,0012_tcia,l2r_mrct,mr_target
+1.589313742083154,,0.8516338964275824,DINO-Reg,mr,4.898979485566356,True,left_kidney,4,B04_dino_reg,ct,MR_fixed__CT_moving__0012_tcia,server1,0012_tcia,l2r_mrct,mr_target
+9.40477561396024,,0.7059929338565197,DINO-Reg,mr,46.216880033165374,True,liver,1,B04_dino_reg,ct,MR_fixed__CT_moving__0014_tcia,server1,0014_tcia,l2r_mrct,mr_target
+12.23656858794485,,0.5892801433739339,DINO-Reg,mr,67.79380502671317,True,spleen,2,B04_dino_reg,ct,MR_fixed__CT_moving__0014_tcia,server1,0014_tcia,l2r_mrct,mr_target
+2.1642069536473385,,0.8333071895424836,DINO-Reg,mr,10.198039027185569,True,right_kidney,3,B04_dino_reg,ct,MR_fixed__CT_moving__0014_tcia,server1,0014_tcia,l2r_mrct,mr_target
+8.220115559269004,,0.8028671116504854,DINO-Reg,mr,90.0,True,left_kidney,4,B04_dino_reg,ct,MR_fixed__CT_moving__0014_tcia,server1,0014_tcia,l2r_mrct,mr_target
+2.376309121672466,,0.9132140937414209,DINO-Reg,mr,8.0,True,liver,1,B04_dino_reg,ct,MR_fixed__CT_moving__0016_tcia,server1,0016_tcia,l2r_mrct,mr_target
+2.322972225917542,,0.8422669577168729,DINO-Reg,mr,8.246211251235321,True,spleen,2,B04_dino_reg,ct,MR_fixed__CT_moving__0016_tcia,server1,0016_tcia,l2r_mrct,mr_target
+1.382906610047885,,0.8857600232845813,DINO-Reg,mr,4.47213595499958,True,right_kidney,3,B04_dino_reg,ct,MR_fixed__CT_moving__0016_tcia,server1,0016_tcia,l2r_mrct,mr_target
+1.4955805948860608,,0.8809028689103794,DINO-Reg,mr,4.47213595499958,True,left_kidney,4,B04_dino_reg,ct,MR_fixed__CT_moving__0016_tcia,server1,0016_tcia,l2r_mrct,mr_target
+8.032891985479354,,0.6982891148028763,MASR/DNS + IO,mr,19.8997487421324,True,liver,1,B05_masr_dns_io,ct,MR_fixed__CT_moving__0002_tcia,server1,0002_tcia,l2r_mrct,mr_target
+5.597065882586023,,0.657403310027436,MASR/DNS + IO,mr,18.973665961010276,True,spleen,2,B05_masr_dns_io,ct,MR_fixed__CT_moving__0002_tcia,server1,0002_tcia,l2r_mrct,mr_target
+7.704188838277511,,0.41517258582520034,MASR/DNS + IO,mr,21.447610589527216,True,right_kidney,3,B05_masr_dns_io,ct,MR_fixed__CT_moving__0002_tcia,server1,0002_tcia,l2r_mrct,mr_target
+nan,missing_in_fixed_or_moving_label,nan,MASR/DNS + IO,mr,nan,False,left_kidney,4,B05_masr_dns_io,ct,MR_fixed__CT_moving__0002_tcia,server1,0002_tcia,l2r_mrct,mr_target
+30.53231111100837,,0.32154126195748384,MASR/DNS + IO,mr,74.21590126111789,True,liver,1,B05_masr_dns_io,ct,MR_fixed__CT_moving__0004_tcia,server1,0004_tcia,l2r_mrct,mr_target
+42.75849692457905,,0.0,MASR/DNS + IO,mr,70.45565981523414,True,spleen,2,B05_masr_dns_io,ct,MR_fixed__CT_moving__0004_tcia,server1,0004_tcia,l2r_mrct,mr_target
+44.870879459095335,,0.0,MASR/DNS + IO,mr,78.08712981389013,True,right_kidney,3,B05_masr_dns_io,ct,MR_fixed__CT_moving__0004_tcia,server1,0004_tcia,l2r_mrct,mr_target
+nan,missing_in_fixed_or_moving_label,nan,MASR/DNS + IO,mr,nan,False,left_kidney,4,B05_masr_dns_io,ct,MR_fixed__CT_moving__0004_tcia,server1,0004_tcia,l2r_mrct,mr_target
+12.985867916294053,,0.5641451299590198,MASR/DNS + IO,mr,31.368774282716245,True,liver,1,B05_masr_dns_io,ct,MR_fixed__CT_moving__0006_tcia,server1,0006_tcia,l2r_mrct,mr_target
+6.237388514433541,,0.5812259973557743,MASR/DNS + IO,mr,23.40939982143925,True,spleen,2,B05_masr_dns_io,ct,MR_fixed__CT_moving__0006_tcia,server1,0006_tcia,l2r_mrct,mr_target
+5.773633620444249,,0.4124582637729549,MASR/DNS + IO,mr,16.61324772583615,True,right_kidney,3,B05_masr_dns_io,ct,MR_fixed__CT_moving__0006_tcia,server1,0006_tcia,l2r_mrct,mr_target
+7.9048343201965,,0.36413370809074486,MASR/DNS + IO,mr,26.90724809414742,True,left_kidney,4,B05_masr_dns_io,ct,MR_fixed__CT_moving__0006_tcia,server1,0006_tcia,l2r_mrct,mr_target
+12.938321690209625,,0.614035294487397,MASR/DNS + IO,mr,28.495613697550013,True,liver,1,B05_masr_dns_io,ct,MR_fixed__CT_moving__0008_tcia,server1,0008_tcia,l2r_mrct,mr_target
+7.853443471695115,,0.6188439477848101,MASR/DNS + IO,mr,23.413663842814298,True,spleen,2,B05_masr_dns_io,ct,MR_fixed__CT_moving__0008_tcia,server1,0008_tcia,l2r_mrct,mr_target
+5.130561600788141,,0.5274029850746269,MASR/DNS + IO,mr,18.33030277982336,True,right_kidney,3,B05_masr_dns_io,ct,MR_fixed__CT_moving__0008_tcia,server1,0008_tcia,l2r_mrct,mr_target
+5.997926557539765,,0.4969017771324567,MASR/DNS + IO,mr,19.79898987322333,True,left_kidney,4,B05_masr_dns_io,ct,MR_fixed__CT_moving__0008_tcia,server1,0008_tcia,l2r_mrct,mr_target
+17.103813261519733,,0.41861883933696986,MASR/DNS + IO,mr,47.58150901348127,True,liver,1,B05_masr_dns_io,ct,MR_fixed__CT_moving__0010_tcia,server1,0010_tcia,l2r_mrct,mr_target
+14.158139336732697,,0.3847803908232401,MASR/DNS + IO,mr,38.67815921162743,True,spleen,2,B05_masr_dns_io,ct,MR_fixed__CT_moving__0010_tcia,server1,0010_tcia,l2r_mrct,mr_target
+7.6696526752050875,,0.5038411299785251,MASR/DNS + IO,mr,31.04834939252005,True,right_kidney,3,B05_masr_dns_io,ct,MR_fixed__CT_moving__0010_tcia,server1,0010_tcia,l2r_mrct,mr_target
+15.448665382538698,,0.20527614197039631,MASR/DNS + IO,mr,38.41874542459709,True,left_kidney,4,B05_masr_dns_io,ct,MR_fixed__CT_moving__0010_tcia,server1,0010_tcia,l2r_mrct,mr_target
+22.35152146832798,,0.38848957442579607,MASR/DNS + IO,mr,54.405882034941776,True,liver,1,B05_masr_dns_io,ct,MR_fixed__CT_moving__0012_tcia,server1,0012_tcia,l2r_mrct,mr_target
+16.57527304158918,,0.058788782312733816,MASR/DNS + IO,mr,43.54305788863492,True,spleen,2,B05_masr_dns_io,ct,MR_fixed__CT_moving__0012_tcia,server1,0012_tcia,l2r_mrct,mr_target
+13.372511419677634,,0.24996547438199143,MASR/DNS + IO,mr,41.32795663954365,True,right_kidney,3,B05_masr_dns_io,ct,MR_fixed__CT_moving__0012_tcia,server1,0012_tcia,l2r_mrct,mr_target
+12.368133319495865,,0.2508443586683258,MASR/DNS + IO,mr,39.7994974842648,True,left_kidney,4,B05_masr_dns_io,ct,MR_fixed__CT_moving__0012_tcia,server1,0012_tcia,l2r_mrct,mr_target
+17.34038839442102,,0.3851773788661014,MASR/DNS + IO,mr,40.149719799769464,True,liver,1,B05_masr_dns_io,ct,MR_fixed__CT_moving__0014_tcia,server1,0014_tcia,l2r_mrct,mr_target
+27.026288460746926,,0.22461136770045967,MASR/DNS + IO,mr,80.34923770640266,True,spleen,2,B05_masr_dns_io,ct,MR_fixed__CT_moving__0014_tcia,server1,0014_tcia,l2r_mrct,mr_target
+27.30099407921635,,0.07235465025461589,MASR/DNS + IO,mr,72.05414605275074,True,right_kidney,3,B05_masr_dns_io,ct,MR_fixed__CT_moving__0014_tcia,server1,0014_tcia,l2r_mrct,mr_target
+28.439498187215623,,0.09305633906453116,MASR/DNS + IO,mr,76.23647421018367,True,left_kidney,4,B05_masr_dns_io,ct,MR_fixed__CT_moving__0014_tcia,server1,0014_tcia,l2r_mrct,mr_target
+7.383869564018505,,0.7589993325587719,MASR/DNS + IO,mr,18.867962264113206,True,liver,1,B05_masr_dns_io,ct,MR_fixed__CT_moving__0016_tcia,server1,0016_tcia,l2r_mrct,mr_target
+7.232735061961883,,0.5497614048482535,MASR/DNS + IO,mr,18.867962264113206,True,spleen,2,B05_masr_dns_io,ct,MR_fixed__CT_moving__0016_tcia,server1,0016_tcia,l2r_mrct,mr_target
+8.194126126378112,,0.41679010285189744,MASR/DNS + IO,mr,24.657656011875904,True,right_kidney,3,B05_masr_dns_io,ct,MR_fixed__CT_moving__0016_tcia,server1,0016_tcia,l2r_mrct,mr_target
+8.739592439823113,,0.3613775901765157,MASR/DNS + IO,mr,26.68332812825267,True,left_kidney,4,B05_masr_dns_io,ct,MR_fixed__CT_moving__0016_tcia,server1,0016_tcia,l2r_mrct,mr_target
+8.360416184782405,,0.6913756283687662,SynMSE,mr,21.2602916254693,True,liver,1,B06_synmse,ct,MR_fixed__CT_moving__0002_tcia,server1,0002_tcia,l2r_mrct,mr_target
+5.539315908085653,,0.6708025532525281,SynMSE,mr,20.97617696340303,True,spleen,2,B06_synmse,ct,MR_fixed__CT_moving__0002_tcia,server1,0002_tcia,l2r_mrct,mr_target
+9.02956334534158,,0.37183296006825417,SynMSE,mr,22.627416997969522,True,right_kidney,3,B06_synmse,ct,MR_fixed__CT_moving__0002_tcia,server1,0002_tcia,l2r_mrct,mr_target
+nan,missing_in_fixed_or_moving_label,nan,SynMSE,mr,nan,False,left_kidney,4,B06_synmse,ct,MR_fixed__CT_moving__0002_tcia,server1,0002_tcia,l2r_mrct,mr_target
+28.954048201307764,,0.339487315712578,SynMSE,mr,72.11102550927978,True,liver,1,B06_synmse,ct,MR_fixed__CT_moving__0004_tcia,server1,0004_tcia,l2r_mrct,mr_target
+39.26465382724231,,3.941275002463297e-05,SynMSE,mr,72.24541440300136,True,spleen,2,B06_synmse,ct,MR_fixed__CT_moving__0004_tcia,server1,0004_tcia,l2r_mrct,mr_target
+42.888294505002534,,0.0,SynMSE,mr,78.05126520435142,True,right_kidney,3,B06_synmse,ct,MR_fixed__CT_moving__0004_tcia,server1,0004_tcia,l2r_mrct,mr_target
+nan,missing_in_fixed_or_moving_label,nan,SynMSE,mr,nan,False,left_kidney,4,B06_synmse,ct,MR_fixed__CT_moving__0004_tcia,server1,0004_tcia,l2r_mrct,mr_target
+12.959724455592536,,0.5710832591214778,SynMSE,mr,34.11744421846396,True,liver,1,B06_synmse,ct,MR_fixed__CT_moving__0006_tcia,server1,0006_tcia,l2r_mrct,mr_target
+8.47045899949897,,0.49801485907464915,SynMSE,mr,29.732137494637012,True,spleen,2,B06_synmse,ct,MR_fixed__CT_moving__0006_tcia,server1,0006_tcia,l2r_mrct,mr_target
+5.5986482280970336,,0.44572273514137334,SynMSE,mr,16.0,True,right_kidney,3,B06_synmse,ct,MR_fixed__CT_moving__0006_tcia,server1,0006_tcia,l2r_mrct,mr_target
+8.460019044310792,,0.3160430064807688,SynMSE,mr,24.899799195977465,True,left_kidney,4,B06_synmse,ct,MR_fixed__CT_moving__0006_tcia,server1,0006_tcia,l2r_mrct,mr_target
+11.173269687832317,,0.6826039689290201,SynMSE,mr,26.153393661244042,True,liver,1,B06_synmse,ct,MR_fixed__CT_moving__0008_tcia,server1,0008_tcia,l2r_mrct,mr_target
+6.60327126567117,,0.6833989541304534,SynMSE,mr,18.547236990991408,True,spleen,2,B06_synmse,ct,MR_fixed__CT_moving__0008_tcia,server1,0008_tcia,l2r_mrct,mr_target
+5.7407599729925565,,0.4995634882141818,SynMSE,mr,18.867962264113206,True,right_kidney,3,B06_synmse,ct,MR_fixed__CT_moving__0008_tcia,server1,0008_tcia,l2r_mrct,mr_target
+5.831611632124484,,0.5495072084399231,SynMSE,mr,17.204650534085253,True,left_kidney,4,B06_synmse,ct,MR_fixed__CT_moving__0008_tcia,server1,0008_tcia,l2r_mrct,mr_target
+15.437742220245577,,0.5181382133262065,SynMSE,mr,50.635955604688654,True,liver,1,B06_synmse,ct,MR_fixed__CT_moving__0010_tcia,server1,0010_tcia,l2r_mrct,mr_target
+12.936614782322703,,0.46949008048318813,SynMSE,mr,43.497126341863094,True,spleen,2,B06_synmse,ct,MR_fixed__CT_moving__0010_tcia,server1,0010_tcia,l2r_mrct,mr_target
+7.504136826490558,,0.509965909373678,SynMSE,mr,26.5329983228432,True,right_kidney,3,B06_synmse,ct,MR_fixed__CT_moving__0010_tcia,server1,0010_tcia,l2r_mrct,mr_target
+11.061867563212333,,0.3654081009566456,SynMSE,mr,30.0,True,left_kidney,4,B06_synmse,ct,MR_fixed__CT_moving__0010_tcia,server1,0010_tcia,l2r_mrct,mr_target
+19.85543198602707,,0.4519004107810003,SynMSE,mr,40.049968789001575,True,liver,1,B06_synmse,ct,MR_fixed__CT_moving__0012_tcia,server1,0012_tcia,l2r_mrct,mr_target
+16.29597838964397,,0.15145949306281614,SynMSE,mr,42.42640687119285,True,spleen,2,B06_synmse,ct,MR_fixed__CT_moving__0012_tcia,server1,0012_tcia,l2r_mrct,mr_target
+12.753084228418317,,0.30294673101711683,SynMSE,mr,42.0,True,right_kidney,3,B06_synmse,ct,MR_fixed__CT_moving__0012_tcia,server1,0012_tcia,l2r_mrct,mr_target
+13.602433554164513,,0.23674169599810702,SynMSE,mr,39.293765408777,True,left_kidney,4,B06_synmse,ct,MR_fixed__CT_moving__0012_tcia,server1,0012_tcia,l2r_mrct,mr_target
+19.290541415609397,,0.4032351858771045,SynMSE,mr,39.59797974644666,True,liver,1,B06_synmse,ct,MR_fixed__CT_moving__0014_tcia,server1,0014_tcia,l2r_mrct,mr_target
+30.39739697918546,,0.2055576471067064,SynMSE,mr,80.94442537939224,True,spleen,2,B06_synmse,ct,MR_fixed__CT_moving__0014_tcia,server1,0014_tcia,l2r_mrct,mr_target
+28.04678396811172,,0.08015095695929553,SynMSE,mr,73.45747068882783,True,right_kidney,3,B06_synmse,ct,MR_fixed__CT_moving__0014_tcia,server1,0014_tcia,l2r_mrct,mr_target
+28.073619866532738,,0.11403529893332691,SynMSE,mr,78.02563681252464,True,left_kidney,4,B06_synmse,ct,MR_fixed__CT_moving__0014_tcia,server1,0014_tcia,l2r_mrct,mr_target
+8.766222896639935,,0.7256012244217588,SynMSE,mr,18.439088914585774,True,liver,1,B06_synmse,ct,MR_fixed__CT_moving__0016_tcia,server1,0016_tcia,l2r_mrct,mr_target
+8.110802021929016,,0.5276609068315689,SynMSE,mr,24.0,True,spleen,2,B06_synmse,ct,MR_fixed__CT_moving__0016_tcia,server1,0016_tcia,l2r_mrct,mr_target
+10.349064082339474,,0.33768633731674264,SynMSE,mr,28.0,True,right_kidney,3,B06_synmse,ct,MR_fixed__CT_moving__0016_tcia,server1,0016_tcia,l2r_mrct,mr_target
+11.183800205900475,,0.2921214344675777,SynMSE,mr,30.133038346638727,True,left_kidney,4,B06_synmse,ct,MR_fixed__CT_moving__0016_tcia,server1,0016_tcia,l2r_mrct,mr_target
+3.0048059200985326,,0.8645273704080151,Locor,mr,12.0,True,liver,1,B07_locor,ct,MR_fixed__CT_moving__0002_tcia,server1,0002_tcia,l2r_mrct,mr_target
+2.737339798445575,,0.8043759430911834,Locor,mr,10.392304845413264,True,spleen,2,B07_locor,ct,MR_fixed__CT_moving__0002_tcia,server1,0002_tcia,l2r_mrct,mr_target
+4.2699766064342395,,0.7424586695917887,Locor,mr,30.265491900843113,True,right_kidney,3,B07_locor,ct,MR_fixed__CT_moving__0002_tcia,server1,0002_tcia,l2r_mrct,mr_target
+nan,missing_in_fixed_or_moving_label,nan,Locor,mr,nan,False,left_kidney,4,B07_locor,ct,MR_fixed__CT_moving__0002_tcia,server1,0002_tcia,l2r_mrct,mr_target
+34.876596576762786,,0.26360146210257707,Locor,mr,84.8528137423857,True,liver,1,B07_locor,ct,MR_fixed__CT_moving__0004_tcia,server1,0004_tcia,l2r_mrct,mr_target
+48.118009955823595,,0.0,Locor,mr,76.6550715869472,True,spleen,2,B07_locor,ct,MR_fixed__CT_moving__0004_tcia,server1,0004_tcia,l2r_mrct,mr_target
+63.14453508468462,,0.0,Locor,mr,94.86832980505137,True,right_kidney,3,B07_locor,ct,MR_fixed__CT_moving__0004_tcia,server1,0004_tcia,l2r_mrct,mr_target
+nan,missing_in_fixed_or_moving_label,nan,Locor,mr,nan,False,left_kidney,4,B07_locor,ct,MR_fixed__CT_moving__0004_tcia,server1,0004_tcia,l2r_mrct,mr_target
+14.566828363739667,,0.5607863045270032,Locor,mr,52.53570214625479,True,liver,1,B07_locor,ct,MR_fixed__CT_moving__0006_tcia,server1,0006_tcia,l2r_mrct,mr_target
+12.428781410799958,,0.36851448545963655,Locor,mr,46.0,True,spleen,2,B07_locor,ct,MR_fixed__CT_moving__0006_tcia,server1,0006_tcia,l2r_mrct,mr_target
+12.587602265570304,,0.2743027888446215,Locor,mr,40.29888335921977,True,right_kidney,3,B07_locor,ct,MR_fixed__CT_moving__0006_tcia,server1,0006_tcia,l2r_mrct,mr_target
+11.42268539938011,,0.32992685583856407,Locor,mr,37.95523213371745,True,left_kidney,4,B07_locor,ct,MR_fixed__CT_moving__0006_tcia,server1,0006_tcia,l2r_mrct,mr_target
+1.9443205871791744,,0.9354243027777313,Locor,mr,7.483314773547883,True,liver,1,B07_locor,ct,MR_fixed__CT_moving__0008_tcia,server1,0008_tcia,l2r_mrct,mr_target
+1.4293331183440832,,0.9121141804358727,Locor,mr,4.898979485566356,True,spleen,2,B07_locor,ct,MR_fixed__CT_moving__0008_tcia,server1,0008_tcia,l2r_mrct,mr_target
+1.0591913314550796,,0.9105608539679761,Locor,mr,2.8284271247461903,True,right_kidney,3,B07_locor,ct,MR_fixed__CT_moving__0008_tcia,server1,0008_tcia,l2r_mrct,mr_target
+1.0883733960511268,,0.9100480819850489,Locor,mr,3.4641016151377544,True,left_kidney,4,B07_locor,ct,MR_fixed__CT_moving__0008_tcia,server1,0008_tcia,l2r_mrct,mr_target
+2.8903781089030813,,0.8806915300590926,Locor,mr,14.142135623730951,True,liver,1,B07_locor,ct,MR_fixed__CT_moving__0010_tcia,server1,0010_tcia,l2r_mrct,mr_target
+1.1795019014535324,,0.9228693219899733,Locor,mr,4.0,True,spleen,2,B07_locor,ct,MR_fixed__CT_moving__0010_tcia,server1,0010_tcia,l2r_mrct,mr_target
+1.3757245736263628,,0.8951365325577638,Locor,mr,7.211102550927978,True,right_kidney,3,B07_locor,ct,MR_fixed__CT_moving__0010_tcia,server1,0010_tcia,l2r_mrct,mr_target
+1.1633035483392535,,0.9082847007666781,Locor,mr,4.0,True,left_kidney,4,B07_locor,ct,MR_fixed__CT_moving__0010_tcia,server1,0010_tcia,l2r_mrct,mr_target
+2.201673986067985,,0.9238239437400863,Locor,mr,8.0,True,liver,1,B07_locor,ct,MR_fixed__CT_moving__0012_tcia,server1,0012_tcia,l2r_mrct,mr_target
+1.5387951714826107,,0.8356677084539106,Locor,mr,5.656854249492381,True,spleen,2,B07_locor,ct,MR_fixed__CT_moving__0012_tcia,server1,0012_tcia,l2r_mrct,mr_target
+3.0393981231776066,,0.7343814080656186,Locor,mr,15.748015748023622,True,right_kidney,3,B07_locor,ct,MR_fixed__CT_moving__0012_tcia,server1,0012_tcia,l2r_mrct,mr_target
+3.191375305376419,,0.7286366874816647,Locor,mr,20.707406080801487,True,left_kidney,4,B07_locor,ct,MR_fixed__CT_moving__0012_tcia,server1,0012_tcia,l2r_mrct,mr_target
+23.69164466656629,,0.1363689100304331,Locor,mr,60.29925372672534,True,liver,1,B07_locor,ct,MR_fixed__CT_moving__0014_tcia,server1,0014_tcia,l2r_mrct,mr_target
+29.862679781200313,,0.21122482457904262,Locor,mr,85.19624133252618,True,spleen,2,B07_locor,ct,MR_fixed__CT_moving__0014_tcia,server1,0014_tcia,l2r_mrct,mr_target
+39.07534567033963,,0.002437043054427295,Locor,mr,90.75241043630741,True,right_kidney,3,B07_locor,ct,MR_fixed__CT_moving__0014_tcia,server1,0014_tcia,l2r_mrct,mr_target
+32.416325586885215,,0.11882171515199039,Locor,mr,91.26444851594864,True,left_kidney,4,B07_locor,ct,MR_fixed__CT_moving__0014_tcia,server1,0014_tcia,l2r_mrct,mr_target
+3.3184392836247607,,0.8795903337282537,Locor,mr,12.96148139681572,True,liver,1,B07_locor,ct,MR_fixed__CT_moving__0016_tcia,server1,0016_tcia,l2r_mrct,mr_target
+1.1455301878202893,,0.9151438078149225,Locor,mr,3.4641016151377544,True,spleen,2,B07_locor,ct,MR_fixed__CT_moving__0016_tcia,server1,0016_tcia,l2r_mrct,mr_target
+1.1578894940170774,,0.9043149185619411,Locor,mr,4.0,True,right_kidney,3,B07_locor,ct,MR_fixed__CT_moving__0016_tcia,server1,0016_tcia,l2r_mrct,mr_target
+1.2170751807501012,,0.9015706806282723,Locor,mr,4.0,True,left_kidney,4,B07_locor,ct,MR_fixed__CT_moving__0016_tcia,server1,0016_tcia,l2r_mrct,mr_target
+6.976184874397537,,0.7408075107834207,DGMIR-U,mr,22.0,True,liver,1,B08_dgmir_u,ct,MR_fixed__CT_moving__0002_tcia,server1,0002_tcia,l2r_mrct,mr_target
+7.247679371389906,,0.5308396481610863,DGMIR-U,mr,20.784609690826528,True,spleen,2,B08_dgmir_u,ct,MR_fixed__CT_moving__0002_tcia,server1,0002_tcia,l2r_mrct,mr_target
+10.843834018515963,,0.2967642763815233,DGMIR-U,mr,31.304951684997057,True,right_kidney,3,B08_dgmir_u,ct,MR_fixed__CT_moving__0002_tcia,server1,0002_tcia,l2r_mrct,mr_target
+nan,missing_in_fixed_or_moving_label,nan,DGMIR-U,mr,nan,False,left_kidney,4,B08_dgmir_u,ct,MR_fixed__CT_moving__0002_tcia,server1,0002_tcia,l2r_mrct,mr_target
+30.60706163854863,,0.3108111504542531,DGMIR-U,mr,74.02702209328699,True,liver,1,B08_dgmir_u,ct,MR_fixed__CT_moving__0004_tcia,server1,0004_tcia,l2r_mrct,mr_target
+36.48235902396028,,0.0015873015873015873,DGMIR-U,mr,69.88562083862459,True,spleen,2,B08_dgmir_u,ct,MR_fixed__CT_moving__0004_tcia,server1,0004_tcia,l2r_mrct,mr_target
+55.02192707575337,,0.0,DGMIR-U,mr,81.80464534487024,True,right_kidney,3,B08_dgmir_u,ct,MR_fixed__CT_moving__0004_tcia,server1,0004_tcia,l2r_mrct,mr_target
+nan,missing_in_fixed_or_moving_label,nan,DGMIR-U,mr,nan,False,left_kidney,4,B08_dgmir_u,ct,MR_fixed__CT_moving__0004_tcia,server1,0004_tcia,l2r_mrct,mr_target
+14.631092204305762,,0.5399956783058959,DGMIR-U,mr,37.78888725538237,True,liver,1,B08_dgmir_u,ct,MR_fixed__CT_moving__0006_tcia,server1,0006_tcia,l2r_mrct,mr_target
+5.468682587198918,,0.6512894813097653,DGMIR-U,mr,23.065125189341593,True,spleen,2,B08_dgmir_u,ct,MR_fixed__CT_moving__0006_tcia,server1,0006_tcia,l2r_mrct,mr_target
+5.056579568447291,,0.4741867840493562,DGMIR-U,mr,17.08800749063506,True,right_kidney,3,B08_dgmir_u,ct,MR_fixed__CT_moving__0006_tcia,server1,0006_tcia,l2r_mrct,mr_target
+5.860269034419414,,0.4952611601425145,DGMIR-U,mr,26.153393661244042,True,left_kidney,4,B08_dgmir_u,ct,MR_fixed__CT_moving__0006_tcia,server1,0006_tcia,l2r_mrct,mr_target
+9.980564359110303,,0.7081473247516301,DGMIR-U,mr,27.49545416973504,True,liver,1,B08_dgmir_u,ct,MR_fixed__CT_moving__0008_tcia,server1,0008_tcia,l2r_mrct,mr_target
+6.631565579173154,,0.6688313348503055,DGMIR-U,mr,20.591260281974,True,spleen,2,B08_dgmir_u,ct,MR_fixed__CT_moving__0008_tcia,server1,0008_tcia,l2r_mrct,mr_target
+4.001850519525796,,0.5853194650817236,DGMIR-U,mr,18.110770276274835,True,right_kidney,3,B08_dgmir_u,ct,MR_fixed__CT_moving__0008_tcia,server1,0008_tcia,l2r_mrct,mr_target
+5.025793345999508,,0.5558815140773337,DGMIR-U,mr,20.199009876724155,True,left_kidney,4,B08_dgmir_u,ct,MR_fixed__CT_moving__0008_tcia,server1,0008_tcia,l2r_mrct,mr_target
+16.995313865064105,,0.4663352709563253,DGMIR-U,mr,63.84355879804947,True,liver,1,B08_dgmir_u,ct,MR_fixed__CT_moving__0010_tcia,server1,0010_tcia,l2r_mrct,mr_target
+9.844841851808361,,0.585860570564897,DGMIR-U,mr,44.721359549995796,True,spleen,2,B08_dgmir_u,ct,MR_fixed__CT_moving__0010_tcia,server1,0010_tcia,l2r_mrct,mr_target
+8.261833129978235,,0.41750248614860064,DGMIR-U,mr,24.899799195977465,True,right_kidney,3,B08_dgmir_u,ct,MR_fixed__CT_moving__0010_tcia,server1,0010_tcia,l2r_mrct,mr_target
+9.567817819766734,,0.4055784534826451,DGMIR-U,mr,27.49545416973504,True,left_kidney,4,B08_dgmir_u,ct,MR_fixed__CT_moving__0010_tcia,server1,0010_tcia,l2r_mrct,mr_target
+20.864634552686248,,0.3888030853293907,DGMIR-U,mr,50.35871324805669,True,liver,1,B08_dgmir_u,ct,MR_fixed__CT_moving__0012_tcia,server1,0012_tcia,l2r_mrct,mr_target
+16.23054856803924,,0.09498602050326188,DGMIR-U,mr,36.0,True,spleen,2,B08_dgmir_u,ct,MR_fixed__CT_moving__0012_tcia,server1,0012_tcia,l2r_mrct,mr_target
+26.304165698343084,,0.014893186872430757,DGMIR-U,mr,52.61178575186362,True,right_kidney,3,B08_dgmir_u,ct,MR_fixed__CT_moving__0012_tcia,server1,0012_tcia,l2r_mrct,mr_target
+15.46504689417522,,0.2777643064985451,DGMIR-U,mr,44.090815370097204,True,left_kidney,4,B08_dgmir_u,ct,MR_fixed__CT_moving__0012_tcia,server1,0012_tcia,l2r_mrct,mr_target
+17.235083371238733,,0.3761480093289152,DGMIR-U,mr,41.617304093369626,True,liver,1,B08_dgmir_u,ct,MR_fixed__CT_moving__0014_tcia,server1,0014_tcia,l2r_mrct,mr_target
+30.788820687341058,,0.1540018142488312,DGMIR-U,mr,88.04544281222056,True,spleen,2,B08_dgmir_u,ct,MR_fixed__CT_moving__0014_tcia,server1,0014_tcia,l2r_mrct,mr_target
+29.840874338680862,,0.015367575799529281,DGMIR-U,mr,75.94076095918554,True,right_kidney,3,B08_dgmir_u,ct,MR_fixed__CT_moving__0014_tcia,server1,0014_tcia,l2r_mrct,mr_target
+31.288996789355664,,0.054234571199572534,DGMIR-U,mr,80.48975002771806,True,left_kidney,4,B08_dgmir_u,ct,MR_fixed__CT_moving__0014_tcia,server1,0014_tcia,l2r_mrct,mr_target
+9.871808954768253,,0.6753029984870267,DGMIR-U,mr,22.80350850198276,True,liver,1,B08_dgmir_u,ct,MR_fixed__CT_moving__0016_tcia,server1,0016_tcia,l2r_mrct,mr_target
+11.178844173549075,,0.3296651028041424,DGMIR-U,mr,24.819347291981714,True,spleen,2,B08_dgmir_u,ct,MR_fixed__CT_moving__0016_tcia,server1,0016_tcia,l2r_mrct,mr_target
+18.62453613808545,,0.06413808766749943,DGMIR-U,mr,49.71921157862421,True,right_kidney,3,B08_dgmir_u,ct,MR_fixed__CT_moving__0016_tcia,server1,0016_tcia,l2r_mrct,mr_target
+18.105506005594165,,0.07488267171415977,DGMIR-U,mr,50.07993610219566,True,left_kidney,4,B08_dgmir_u,ct,MR_fixed__CT_moving__0016_tcia,server1,0016_tcia,l2r_mrct,mr_target
+7.611640176188899,,0.7112004148301789,M2M-Reg,mr,20.97617696340303,True,liver,1,B09_m2m_reg,ct,MR_fixed__CT_moving__0002_tcia,server1,0002_tcia,l2r_mrct,mr_target
+8.44304512872075,,0.5258347594945927,M2M-Reg,mr,24.657656011875904,True,spleen,2,B09_m2m_reg,ct,MR_fixed__CT_moving__0002_tcia,server1,0002_tcia,l2r_mrct,mr_target
+10.127502436145093,,0.3086685480142217,M2M-Reg,mr,26.90724809414742,True,right_kidney,3,B09_m2m_reg,ct,MR_fixed__CT_moving__0002_tcia,server1,0002_tcia,l2r_mrct,mr_target
+nan,missing_in_fixed_or_moving_label,nan,M2M-Reg,mr,nan,False,left_kidney,4,B09_m2m_reg,ct,MR_fixed__CT_moving__0002_tcia,server1,0002_tcia,l2r_mrct,mr_target
+29.58111057580586,,0.32662990938160646,M2M-Reg,mr,76.05261336732617,True,liver,1,B09_m2m_reg,ct,MR_fixed__CT_moving__0004_tcia,server1,0004_tcia,l2r_mrct,mr_target
+36.120573976035544,,0.0052500231074960714,M2M-Reg,mr,71.94025230307594,True,spleen,2,B09_m2m_reg,ct,MR_fixed__CT_moving__0004_tcia,server1,0004_tcia,l2r_mrct,mr_target
+40.39936936666683,,0.00011836187169573109,M2M-Reg,mr,78.07688518377255,True,right_kidney,3,B09_m2m_reg,ct,MR_fixed__CT_moving__0004_tcia,server1,0004_tcia,l2r_mrct,mr_target
+nan,missing_in_fixed_or_moving_label,nan,M2M-Reg,mr,nan,False,left_kidney,4,B09_m2m_reg,ct,MR_fixed__CT_moving__0004_tcia,server1,0004_tcia,l2r_mrct,mr_target
+12.412948176483122,,0.6034353561457587,M2M-Reg,mr,34.058772731852805,True,liver,1,B09_m2m_reg,ct,MR_fixed__CT_moving__0006_tcia,server1,0006_tcia,l2r_mrct,mr_target
+7.991332758026631,,0.5044321993291806,M2M-Reg,mr,28.91366458960192,True,spleen,2,B09_m2m_reg,ct,MR_fixed__CT_moving__0006_tcia,server1,0006_tcia,l2r_mrct,mr_target
+4.947587367006748,,0.5130779490219324,M2M-Reg,mr,12.806248474865697,True,right_kidney,3,B09_m2m_reg,ct,MR_fixed__CT_moving__0006_tcia,server1,0006_tcia,l2r_mrct,mr_target
+7.451407638406737,,0.3511555708865126,M2M-Reg,mr,23.748684174075834,True,left_kidney,4,B09_m2m_reg,ct,MR_fixed__CT_moving__0006_tcia,server1,0006_tcia,l2r_mrct,mr_target
+14.933682585418222,,0.5649592207459024,M2M-Reg,mr,30.0,True,liver,1,B09_m2m_reg,ct,MR_fixed__CT_moving__0008_tcia,server1,0008_tcia,l2r_mrct,mr_target
+11.347557746853,,0.43876691062319806,M2M-Reg,mr,23.49468024894146,True,spleen,2,B09_m2m_reg,ct,MR_fixed__CT_moving__0008_tcia,server1,0008_tcia,l2r_mrct,mr_target
+7.147849115734573,,0.38220792244693297,M2M-Reg,mr,20.97617696340303,True,right_kidney,3,B09_m2m_reg,ct,MR_fixed__CT_moving__0008_tcia,server1,0008_tcia,l2r_mrct,mr_target
+7.434177456009682,,0.4307479523696324,M2M-Reg,mr,24.24871130596428,True,left_kidney,4,B09_m2m_reg,ct,MR_fixed__CT_moving__0008_tcia,server1,0008_tcia,l2r_mrct,mr_target
+13.246671215392183,,0.5395742068037171,M2M-Reg,mr,41.95235392680606,True,liver,1,B09_m2m_reg,ct,MR_fixed__CT_moving__0010_tcia,server1,0010_tcia,l2r_mrct,mr_target
+10.193897135352147,,0.5212235985782627,M2M-Reg,mr,36.05551275463989,True,spleen,2,B09_m2m_reg,ct,MR_fixed__CT_moving__0010_tcia,server1,0010_tcia,l2r_mrct,mr_target
+6.193854274046274,,0.5830432783870756,M2M-Reg,mr,26.0,True,right_kidney,3,B09_m2m_reg,ct,MR_fixed__CT_moving__0010_tcia,server1,0010_tcia,l2r_mrct,mr_target
+10.65135188601393,,0.3608354832307998,M2M-Reg,mr,24.166091947189145,True,left_kidney,4,B09_m2m_reg,ct,MR_fixed__CT_moving__0010_tcia,server1,0010_tcia,l2r_mrct,mr_target
+23.937965838199858,,0.36334415291677935,M2M-Reg,mr,48.41487374764082,True,liver,1,B09_m2m_reg,ct,MR_fixed__CT_moving__0012_tcia,server1,0012_tcia,l2r_mrct,mr_target
+15.857825732379702,,0.1217935871743487,M2M-Reg,mr,48.373546489791295,True,spleen,2,B09_m2m_reg,ct,MR_fixed__CT_moving__0012_tcia,server1,0012_tcia,l2r_mrct,mr_target
+14.69720035259349,,0.20542920029347028,M2M-Reg,mr,44.31703961232068,True,right_kidney,3,B09_m2m_reg,ct,MR_fixed__CT_moving__0012_tcia,server1,0012_tcia,l2r_mrct,mr_target
+11.56899590974797,,0.24260958205912334,M2M-Reg,mr,37.094473981982816,True,left_kidney,4,B09_m2m_reg,ct,MR_fixed__CT_moving__0012_tcia,server1,0012_tcia,l2r_mrct,mr_target
+16.338505389238207,,0.4120496718447519,M2M-Reg,mr,38.2099463490856,True,liver,1,B09_m2m_reg,ct,MR_fixed__CT_moving__0014_tcia,server1,0014_tcia,l2r_mrct,mr_target
+26.471751738907237,,0.2189330644386824,M2M-Reg,mr,83.16249154516716,True,spleen,2,B09_m2m_reg,ct,MR_fixed__CT_moving__0014_tcia,server1,0014_tcia,l2r_mrct,mr_target
+20.517273031245793,,0.14879436872847088,M2M-Reg,mr,69.84121467712,True,right_kidney,3,B09_m2m_reg,ct,MR_fixed__CT_moving__0014_tcia,server1,0014_tcia,l2r_mrct,mr_target
+23.465412488743272,,0.17438343415542112,M2M-Reg,mr,78.56971051391068,True,left_kidney,4,B09_m2m_reg,ct,MR_fixed__CT_moving__0014_tcia,server1,0014_tcia,l2r_mrct,mr_target
+5.339332505518382,,0.8197681403171552,M2M-Reg,mr,12.649110640673518,True,liver,1,B09_m2m_reg,ct,MR_fixed__CT_moving__0016_tcia,server1,0016_tcia,l2r_mrct,mr_target
+7.657690516664431,,0.5371742415864942,M2M-Reg,mr,20.591260281974,True,spleen,2,B09_m2m_reg,ct,MR_fixed__CT_moving__0016_tcia,server1,0016_tcia,l2r_mrct,mr_target
+6.721352193851862,,0.4711341126081913,M2M-Reg,mr,23.323807579381203,True,right_kidney,3,B09_m2m_reg,ct,MR_fixed__CT_moving__0016_tcia,server1,0016_tcia,l2r_mrct,mr_target
+6.49125067857063,,0.5349399922570655,M2M-Reg,mr,28.635642126552707,True,left_kidney,4,B09_m2m_reg,ct,MR_fixed__CT_moving__0016_tcia,server1,0016_tcia,l2r_mrct,mr_target
+8.180531007673778,,0.6938947342543881,PRA-CM v3,mr,19.595917942265423,True,liver,1,B10_ours,ct,MR_fixed__CT_moving__0002_tcia,server1,0002_tcia,l2r_mrct,mr_target
+6.439099859234818,,0.6305074991907348,PRA-CM v3,mr,30.331501776206203,True,spleen,2,B10_ours,ct,MR_fixed__CT_moving__0002_tcia,server1,0002_tcia,l2r_mrct,mr_target
+7.372809503748238,,0.4798319454729556,PRA-CM v3,mr,19.79898987322333,True,right_kidney,3,B10_ours,ct,MR_fixed__CT_moving__0002_tcia,server1,0002_tcia,l2r_mrct,mr_target
+nan,missing_in_fixed_or_moving_label,nan,PRA-CM v3,mr,nan,False,left_kidney,4,B10_ours,ct,MR_fixed__CT_moving__0002_tcia,server1,0002_tcia,l2r_mrct,mr_target
+30.89946395017944,,0.32186659474746887,PRA-CM v3,mr,73.81056834898374,True,liver,1,B10_ours,ct,MR_fixed__CT_moving__0004_tcia,server1,0004_tcia,l2r_mrct,mr_target
+46.90148449288967,,0.0,PRA-CM v3,mr,72.55342858886821,True,spleen,2,B10_ours,ct,MR_fixed__CT_moving__0004_tcia,server1,0004_tcia,l2r_mrct,mr_target
+42.89132153571573,,0.0,PRA-CM v3,mr,78.2559901860554,True,right_kidney,3,B10_ours,ct,MR_fixed__CT_moving__0004_tcia,server1,0004_tcia,l2r_mrct,mr_target
+nan,missing_in_fixed_or_moving_label,nan,PRA-CM v3,mr,nan,False,left_kidney,4,B10_ours,ct,MR_fixed__CT_moving__0004_tcia,server1,0004_tcia,l2r_mrct,mr_target
+11.306828196860867,,0.6185570142128676,PRA-CM v3,mr,28.495613697550013,True,liver,1,B10_ours,ct,MR_fixed__CT_moving__0006_tcia,server1,0006_tcia,l2r_mrct,mr_target
+5.190418094767338,,0.6488407513961754,PRA-CM v3,mr,18.110770276274835,True,spleen,2,B10_ours,ct,MR_fixed__CT_moving__0006_tcia,server1,0006_tcia,l2r_mrct,mr_target
+3.660797356415027,,0.6555458324217895,PRA-CM v3,mr,8.717797887081348,True,right_kidney,3,B10_ours,ct,MR_fixed__CT_moving__0006_tcia,server1,0006_tcia,l2r_mrct,mr_target
+5.9711587097946675,,0.4920718683251665,PRA-CM v3,mr,20.591260281974,True,left_kidney,4,B10_ours,ct,MR_fixed__CT_moving__0006_tcia,server1,0006_tcia,l2r_mrct,mr_target
+14.391132862257521,,0.5884760988375096,PRA-CM v3,mr,30.331501776206203,True,liver,1,B10_ours,ct,MR_fixed__CT_moving__0008_tcia,server1,0008_tcia,l2r_mrct,mr_target
+7.323375420679472,,0.6353641117037309,PRA-CM v3,mr,22.360679774997898,True,spleen,2,B10_ours,ct,MR_fixed__CT_moving__0008_tcia,server1,0008_tcia,l2r_mrct,mr_target
+5.690228369953587,,0.4844003043843047,PRA-CM v3,mr,16.1245154965971,True,right_kidney,3,B10_ours,ct,MR_fixed__CT_moving__0008_tcia,server1,0008_tcia,l2r_mrct,mr_target
+5.066562775794103,,0.6234942041063717,PRA-CM v3,mr,18.439088914585774,True,left_kidney,4,B10_ours,ct,MR_fixed__CT_moving__0008_tcia,server1,0008_tcia,l2r_mrct,mr_target
+17.033003372233665,,0.4266284896206156,PRA-CM v3,mr,46.861498055439924,True,liver,1,B10_ours,ct,MR_fixed__CT_moving__0010_tcia,server1,0010_tcia,l2r_mrct,mr_target
+15.935975211373984,,0.34033213182286304,PRA-CM v3,mr,44.58699361921591,True,spleen,2,B10_ours,ct,MR_fixed__CT_moving__0010_tcia,server1,0010_tcia,l2r_mrct,mr_target
+9.18776636198402,,0.47827040301714685,PRA-CM v3,mr,41.66533331199932,True,right_kidney,3,B10_ours,ct,MR_fixed__CT_moving__0010_tcia,server1,0010_tcia,l2r_mrct,mr_target
+19.5849928823853,,0.12082024010958022,PRA-CM v3,mr,45.53239525151434,True,left_kidney,4,B10_ours,ct,MR_fixed__CT_moving__0010_tcia,server1,0010_tcia,l2r_mrct,mr_target
+22.840729879219502,,0.3846984492743145,PRA-CM v3,mr,55.02726596879042,True,liver,1,B10_ours,ct,MR_fixed__CT_moving__0012_tcia,server1,0012_tcia,l2r_mrct,mr_target
+18.791032123518686,,0.05844298245614035,PRA-CM v3,mr,43.174066289845804,True,spleen,2,B10_ours,ct,MR_fixed__CT_moving__0012_tcia,server1,0012_tcia,l2r_mrct,mr_target
+15.529645656683464,,0.2094003429933436,PRA-CM v3,mr,45.65084884205331,True,right_kidney,3,B10_ours,ct,MR_fixed__CT_moving__0012_tcia,server1,0012_tcia,l2r_mrct,mr_target
+16.746299074358486,,0.12410395505244803,PRA-CM v3,mr,41.23105625617661,True,left_kidney,4,B10_ours,ct,MR_fixed__CT_moving__0012_tcia,server1,0012_tcia,l2r_mrct,mr_target
+19.56148540531946,,0.34626834997902045,PRA-CM v3,mr,41.23105625617661,True,liver,1,B10_ours,ct,MR_fixed__CT_moving__0014_tcia,server1,0014_tcia,l2r_mrct,mr_target
+29.036814149649572,,0.21587648585872388,PRA-CM v3,mr,80.79603950689662,True,spleen,2,B10_ours,ct,MR_fixed__CT_moving__0014_tcia,server1,0014_tcia,l2r_mrct,mr_target
+25.6995092243166,,0.11321580395098775,PRA-CM v3,mr,69.16212577783831,True,right_kidney,3,B10_ours,ct,MR_fixed__CT_moving__0014_tcia,server1,0014_tcia,l2r_mrct,mr_target
+28.565595299533882,,0.134189374632425,PRA-CM v3,mr,80.58782635881688,True,left_kidney,4,B10_ours,ct,MR_fixed__CT_moving__0014_tcia,server1,0014_tcia,l2r_mrct,mr_target
+4.788358497836085,,0.8406286221579077,PRA-CM v3,mr,12.806248474865697,True,liver,1,B10_ours,ct,MR_fixed__CT_moving__0016_tcia,server1,0016_tcia,l2r_mrct,mr_target
+4.076134034305359,,0.7330438089138832,PRA-CM v3,mr,15.811011811017718,True,spleen,2,B10_ours,ct,MR_fixed__CT_moving__0016_tcia,server1,0016_tcia,l2r_mrct,mr_target
+6.624637957846851,,0.5516764902735497,PRA-CM v3,mr,29.120439557122072,True,right_kidney,3,B10_ours,ct,MR_fixed__CT_moving__0016_tcia,server1,0016_tcia,l2r_mrct,mr_target
+6.7419022028919615,,0.5606994893535022,PRA-CM v3,mr,30.079881874724386,True,left_kidney,4,B10_ours,ct,MR_fixed__CT_moving__0016_tcia,server1,0016_tcia,l2r_mrct,mr_target
+7.302285984488607,,0.7198765127363623,TransMorph + MIND-SSC,mr,19.8997487421324,True,liver,1,B11_transmorph_mind,ct,MR_fixed__CT_moving__0002_tcia,server2,0002_tcia,l2r_mrct,mr_target
+6.563182008933117,,0.5894125850404236,TransMorph + MIND-SSC,mr,18.547236990991408,True,spleen,2,B11_transmorph_mind,ct,MR_fixed__CT_moving__0002_tcia,server2,0002_tcia,l2r_mrct,mr_target
+8.1521924185193,,0.4043225120859713,TransMorph + MIND-SSC,mr,20.688160865577203,True,right_kidney,3,B11_transmorph_mind,ct,MR_fixed__CT_moving__0002_tcia,server2,0002_tcia,l2r_mrct,mr_target
+nan,missing_in_fixed_or_moving_label,nan,TransMorph + MIND-SSC,mr,nan,False,left_kidney,4,B11_transmorph_mind,ct,MR_fixed__CT_moving__0002_tcia,server2,0002_tcia,l2r_mrct,mr_target
+29.362120915812298,,0.3341041448706608,TransMorph + MIND-SSC,mr,72.05553413860729,True,liver,1,B11_transmorph_mind,ct,MR_fixed__CT_moving__0004_tcia,server2,0004_tcia,l2r_mrct,mr_target
+39.178813363026066,,0.0005570365654716906,TransMorph + MIND-SSC,mr,72.60027281461278,True,spleen,2,B11_transmorph_mind,ct,MR_fixed__CT_moving__0004_tcia,server2,0004_tcia,l2r_mrct,mr_target
+45.61482912444987,,0.0,TransMorph + MIND-SSC,mr,76.6550715869472,True,right_kidney,3,B11_transmorph_mind,ct,MR_fixed__CT_moving__0004_tcia,server2,0004_tcia,l2r_mrct,mr_target
+nan,missing_in_fixed_or_moving_label,nan,TransMorph + MIND-SSC,mr,nan,False,left_kidney,4,B11_transmorph_mind,ct,MR_fixed__CT_moving__0004_tcia,server2,0004_tcia,l2r_mrct,mr_target
+11.187920391221082,,0.6097739134830467,TransMorph + MIND-SSC,mr,34.46737587922817,True,liver,1,B11_transmorph_mind,ct,MR_fixed__CT_moving__0006_tcia,server2,0006_tcia,l2r_mrct,mr_target
+8.903643324117235,,0.37918387119097596,TransMorph + MIND-SSC,mr,24.166091947189145,True,spleen,2,B11_transmorph_mind,ct,MR_fixed__CT_moving__0006_tcia,server2,0006_tcia,l2r_mrct,mr_target
+8.974783910673482,,0.3288032115079033,TransMorph + MIND-SSC,mr,24.899799195977465,True,right_kidney,3,B11_transmorph_mind,ct,MR_fixed__CT_moving__0006_tcia,server2,0006_tcia,l2r_mrct,mr_target
+11.566622484166368,,0.2461737443414529,TransMorph + MIND-SSC,mr,31.04834939252005,True,left_kidney,4,B11_transmorph_mind,ct,MR_fixed__CT_moving__0006_tcia,server2,0006_tcia,l2r_mrct,mr_target
+14.261692567418475,,0.5744849039028517,TransMorph + MIND-SSC,mr,33.1058907144937,True,liver,1,B11_transmorph_mind,ct,MR_fixed__CT_moving__0008_tcia,server2,0008_tcia,l2r_mrct,mr_target
+8.6972464171153,,0.5741718939143832,TransMorph + MIND-SSC,mr,21.633307652783937,True,spleen,2,B11_transmorph_mind,ct,MR_fixed__CT_moving__0008_tcia,server2,0008_tcia,l2r_mrct,mr_target
+6.481871879268747,,0.4339967678829633,TransMorph + MIND-SSC,mr,24.166091947189145,True,right_kidney,3,B11_transmorph_mind,ct,MR_fixed__CT_moving__0008_tcia,server2,0008_tcia,l2r_mrct,mr_target
+6.077737498388011,,0.5041220198910248,TransMorph + MIND-SSC,mr,21.540659228538015,True,left_kidney,4,B11_transmorph_mind,ct,MR_fixed__CT_moving__0008_tcia,server2,0008_tcia,l2r_mrct,mr_target
+12.455053856300196,,0.5518017238395236,TransMorph + MIND-SSC,mr,38.47076812334269,True,liver,1,B11_transmorph_mind,ct,MR_fixed__CT_moving__0010_tcia,server2,0010_tcia,l2r_mrct,mr_target
+7.8955399558061945,,0.6056889291657227,TransMorph + MIND-SSC,mr,26.832815729997478,True,spleen,2,B11_transmorph_mind,ct,MR_fixed__CT_moving__0010_tcia,server2,0010_tcia,l2r_mrct,mr_target
+6.448299461412612,,0.5526367571822117,TransMorph + MIND-SSC,mr,23.664319132398465,True,right_kidney,3,B11_transmorph_mind,ct,MR_fixed__CT_moving__0010_tcia,server2,0010_tcia,l2r_mrct,mr_target
+9.3740354834379,,0.4193334703853446,TransMorph + MIND-SSC,mr,26.76564026146708,True,left_kidney,4,B11_transmorph_mind,ct,MR_fixed__CT_moving__0010_tcia,server2,0010_tcia,l2r_mrct,mr_target
+19.594739611189254,,0.4433275815471612,TransMorph + MIND-SSC,mr,38.47076812334269,True,liver,1,B11_transmorph_mind,ct,MR_fixed__CT_moving__0012_tcia,server2,0012_tcia,l2r_mrct,mr_target
+13.257558582955113,,0.17206315226117205,TransMorph + MIND-SSC,mr,38.0,True,spleen,2,B11_transmorph_mind,ct,MR_fixed__CT_moving__0012_tcia,server2,0012_tcia,l2r_mrct,mr_target
+12.590990594410933,,0.2740410588870881,TransMorph + MIND-SSC,mr,37.56060974285453,True,right_kidney,3,B11_transmorph_mind,ct,MR_fixed__CT_moving__0012_tcia,server2,0012_tcia,l2r_mrct,mr_target
+11.522352001330344,,0.258777390438247,TransMorph + MIND-SSC,mr,34.0,True,left_kidney,4,B11_transmorph_mind,ct,MR_fixed__CT_moving__0012_tcia,server2,0012_tcia,l2r_mrct,mr_target
+13.349946695533394,,0.5174043308301615,TransMorph + MIND-SSC,mr,33.52610922848042,True,liver,1,B11_transmorph_mind,ct,MR_fixed__CT_moving__0014_tcia,server2,0014_tcia,l2r_mrct,mr_target
+23.116311382115825,,0.2720796083928941,TransMorph + MIND-SSC,mr,73.43023900274328,True,spleen,2,B11_transmorph_mind,ct,MR_fixed__CT_moving__0014_tcia,server2,0014_tcia,l2r_mrct,mr_target
+25.13421924904008,,0.05787295303221163,TransMorph + MIND-SSC,mr,72.0,True,right_kidney,3,B11_transmorph_mind,ct,MR_fixed__CT_moving__0014_tcia,server2,0014_tcia,l2r_mrct,mr_target
+24.24797808197594,,0.12584399548117595,TransMorph + MIND-SSC,mr,72.78186115158584,True,left_kidney,4,B11_transmorph_mind,ct,MR_fixed__CT_moving__0014_tcia,server2,0014_tcia,l2r_mrct,mr_target
+6.917822356512419,,0.7772339826451993,TransMorph + MIND-SSC,mr,18.439088914585774,True,liver,1,B11_transmorph_mind,ct,MR_fixed__CT_moving__0016_tcia,server2,0016_tcia,l2r_mrct,mr_target
+7.94014434696525,,0.4611640300448995,TransMorph + MIND-SSC,mr,16.97056274847714,True,spleen,2,B11_transmorph_mind,ct,MR_fixed__CT_moving__0016_tcia,server2,0016_tcia,l2r_mrct,mr_target
+8.587283426211366,,0.3556452361072456,TransMorph + MIND-SSC,mr,24.166091947189145,True,right_kidney,3,B11_transmorph_mind,ct,MR_fixed__CT_moving__0016_tcia,server2,0016_tcia,l2r_mrct,mr_target
+7.137266711939466,,0.49903656413232733,TransMorph + MIND-SSC,mr,23.15167380558045,True,left_kidney,4,B11_transmorph_mind,ct,MR_fixed__CT_moving__0016_tcia,server2,0016_tcia,l2r_mrct,mr_target
+7.381060414496624,,0.7143577915525443,CorrMLP + MIND-SSC,mr,24.08318915758459,True,liver,1,B12_corrmlp_mind,ct,MR_fixed__CT_moving__0002_tcia,server2,0002_tcia,l2r_mrct,mr_target
+7.330559843941383,,0.48133500887049085,CorrMLP + MIND-SSC,mr,24.73863375370596,True,spleen,2,B12_corrmlp_mind,ct,MR_fixed__CT_moving__0002_tcia,server2,0002_tcia,l2r_mrct,mr_target
+3.502375270961218,,0.7258725661582976,CorrMLP + MIND-SSC,mr,16.61324772583615,True,right_kidney,3,B12_corrmlp_mind,ct,MR_fixed__CT_moving__0002_tcia,server2,0002_tcia,l2r_mrct,mr_target
+nan,missing_in_fixed_or_moving_label,nan,CorrMLP + MIND-SSC,mr,nan,False,left_kidney,4,B12_corrmlp_mind,ct,MR_fixed__CT_moving__0002_tcia,server2,0002_tcia,l2r_mrct,mr_target
+28.514525313604267,,0.3636973239656708,CorrMLP + MIND-SSC,mr,73.48469228349535,True,liver,1,B12_corrmlp_mind,ct,MR_fixed__CT_moving__0004_tcia,server2,0004_tcia,l2r_mrct,mr_target
+32.63247426947679,,0.008965726634637709,CorrMLP + MIND-SSC,mr,64.15605972938177,True,spleen,2,B12_corrmlp_mind,ct,MR_fixed__CT_moving__0004_tcia,server2,0004_tcia,l2r_mrct,mr_target
+45.457412086181975,,0.0,CorrMLP + MIND-SSC,mr,73.48469228349535,True,right_kidney,3,B12_corrmlp_mind,ct,MR_fixed__CT_moving__0004_tcia,server2,0004_tcia,l2r_mrct,mr_target
+nan,missing_in_fixed_or_moving_label,nan,CorrMLP + MIND-SSC,mr,nan,False,left_kidney,4,B12_corrmlp_mind,ct,MR_fixed__CT_moving__0004_tcia,server2,0004_tcia,l2r_mrct,mr_target
+9.334340475774031,,0.6394270647494683,CorrMLP + MIND-SSC,mr,25.37715508089904,True,liver,1,B12_corrmlp_mind,ct,MR_fixed__CT_moving__0006_tcia,server2,0006_tcia,l2r_mrct,mr_target
+6.111141413767533,,0.5873848812459168,CorrMLP + MIND-SSC,mr,22.360679774997898,True,spleen,2,B12_corrmlp_mind,ct,MR_fixed__CT_moving__0006_tcia,server2,0006_tcia,l2r_mrct,mr_target
+2.3474602504171367,,0.7646469531573856,CorrMLP + MIND-SSC,mr,8.717797887081348,True,right_kidney,3,B12_corrmlp_mind,ct,MR_fixed__CT_moving__0006_tcia,server2,0006_tcia,l2r_mrct,mr_target
+5.09559299366809,,0.5109214858785883,CorrMLP + MIND-SSC,mr,24.08318915758459,True,left_kidney,4,B12_corrmlp_mind,ct,MR_fixed__CT_moving__0006_tcia,server2,0006_tcia,l2r_mrct,mr_target
+6.831066216072924,,0.790676362836598,CorrMLP + MIND-SSC,mr,24.08318915758459,True,liver,1,B12_corrmlp_mind,ct,MR_fixed__CT_moving__0008_tcia,server2,0008_tcia,l2r_mrct,mr_target
+4.330715866004223,,0.7467845767199323,CorrMLP + MIND-SSC,mr,14.142135623730951,True,spleen,2,B12_corrmlp_mind,ct,MR_fixed__CT_moving__0008_tcia,server2,0008_tcia,l2r_mrct,mr_target
+3.055245558339833,,0.6601179564836216,CorrMLP + MIND-SSC,mr,16.24807680927192,True,right_kidney,3,B12_corrmlp_mind,ct,MR_fixed__CT_moving__0008_tcia,server2,0008_tcia,l2r_mrct,mr_target
+2.8698929571472687,,0.7311032361073251,CorrMLP + MIND-SSC,mr,15.362291495737216,True,left_kidney,4,B12_corrmlp_mind,ct,MR_fixed__CT_moving__0008_tcia,server2,0008_tcia,l2r_mrct,mr_target
+11.81383342237387,,0.6143030988476689,CorrMLP + MIND-SSC,mr,48.579831205964474,True,liver,1,B12_corrmlp_mind,ct,MR_fixed__CT_moving__0010_tcia,server2,0010_tcia,l2r_mrct,mr_target
+5.400512691805753,,0.75261012149373,CorrMLP + MIND-SSC,mr,27.235981086896313,True,spleen,2,B12_corrmlp_mind,ct,MR_fixed__CT_moving__0010_tcia,server2,0010_tcia,l2r_mrct,mr_target
+2.8735812977190793,,0.8018692673865088,CorrMLP + MIND-SSC,mr,14.366465803947778,True,right_kidney,3,B12_corrmlp_mind,ct,MR_fixed__CT_moving__0010_tcia,server2,0010_tcia,l2r_mrct,mr_target
+6.087175355088675,,0.6174650469860188,CorrMLP + MIND-SSC,mr,22.0,True,left_kidney,4,B12_corrmlp_mind,ct,MR_fixed__CT_moving__0010_tcia,server2,0010_tcia,l2r_mrct,mr_target
+14.112965345427675,,0.5661494736977476,CorrMLP + MIND-SSC,mr,37.71205780379958,True,liver,1,B12_corrmlp_mind,ct,MR_fixed__CT_moving__0012_tcia,server2,0012_tcia,l2r_mrct,mr_target
+9.535700660422286,,0.3397837879429077,CorrMLP + MIND-SSC,mr,26.0,True,spleen,2,B12_corrmlp_mind,ct,MR_fixed__CT_moving__0012_tcia,server2,0012_tcia,l2r_mrct,mr_target
+13.171477124900274,,0.2931735351836277,CorrMLP + MIND-SSC,mr,38.05259518088089,True,right_kidney,3,B12_corrmlp_mind,ct,MR_fixed__CT_moving__0012_tcia,server2,0012_tcia,l2r_mrct,mr_target
+8.607566932365305,,0.48947546531302877,CorrMLP + MIND-SSC,mr,31.874754901018456,True,left_kidney,4,B12_corrmlp_mind,ct,MR_fixed__CT_moving__0012_tcia,server2,0012_tcia,l2r_mrct,mr_target
+14.911153912188414,,0.4793958964545793,CorrMLP + MIND-SSC,mr,44.090815370097204,True,liver,1,B12_corrmlp_mind,ct,MR_fixed__CT_moving__0014_tcia,server2,0014_tcia,l2r_mrct,mr_target
+33.9082722898161,,0.09618858944168256,CorrMLP + MIND-SSC,mr,98.10198774744578,True,spleen,2,B12_corrmlp_mind,ct,MR_fixed__CT_moving__0014_tcia,server2,0014_tcia,l2r_mrct,mr_target
+40.71247064891245,,0.0,CorrMLP + MIND-SSC,mr,91.99891291502676,True,right_kidney,3,B12_corrmlp_mind,ct,MR_fixed__CT_moving__0014_tcia,server2,0014_tcia,l2r_mrct,mr_target
+38.78756031952119,,0.024421437271619977,CorrMLP + MIND-SSC,mr,94.03509928256632,True,left_kidney,4,B12_corrmlp_mind,ct,MR_fixed__CT_moving__0014_tcia,server2,0014_tcia,l2r_mrct,mr_target
+8.509629765943217,,0.717286021156518,CorrMLP + MIND-SSC,mr,22.891046284519195,True,liver,1,B12_corrmlp_mind,ct,MR_fixed__CT_moving__0016_tcia,server2,0016_tcia,l2r_mrct,mr_target
+7.271699300220935,,0.538896041865681,CorrMLP + MIND-SSC,mr,20.09975124224178,True,spleen,2,B12_corrmlp_mind,ct,MR_fixed__CT_moving__0016_tcia,server2,0016_tcia,l2r_mrct,mr_target
+7.845050696987973,,0.43570519810977826,CorrMLP + MIND-SSC,mr,31.68595903550972,True,right_kidney,3,B12_corrmlp_mind,ct,MR_fixed__CT_moving__0016_tcia,server2,0016_tcia,l2r_mrct,mr_target
+6.194017158131274,,0.5300106908313394,CorrMLP + MIND-SSC,mr,27.49545416973504,True,left_kidney,4,B12_corrmlp_mind,ct,MR_fixed__CT_moving__0016_tcia,server2,0016_tcia,l2r_mrct,mr_target

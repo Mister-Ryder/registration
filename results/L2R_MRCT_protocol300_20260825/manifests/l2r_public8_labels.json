@@ -1,0 +1,144 @@
+{
+  "schema": "registration_evaluation_manifest_v1",
+  "dataset_id": "L2R-MRCT-P8",
+  "labels_are_evaluation_only": true,
+  "pairs": [
+    {
+      "pair_id": "MR_fixed__CT_moving__0002_tcia",
+      "fixed_label": "/autodl-fs/data/datasets/Learn2Reg_2021_MRCT/01_official_extracted/public_paired/Train/seg0002_tcia_MR.nii.gz",
+      "moving_label": "/autodl-fs/data/datasets/Learn2Reg_2021_MRCT/01_official_extracted/public_paired/Train/seg0002_tcia_CT.nii.gz",
+      "label_values": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "label_names": {
+        "1": "liver",
+        "2": "spleen",
+        "3": "right_kidney",
+        "4": "left_kidney"
+      }
+    },
+    {
+      "pair_id": "MR_fixed__CT_moving__0004_tcia",
+      "fixed_label": "/autodl-fs/data/datasets/Learn2Reg_2021_MRCT/01_official_extracted/public_paired/Train/seg0004_tcia_MR.nii.gz",
+      "moving_label": "/autodl-fs/data/datasets/Learn2Reg_2021_MRCT/01_official_extracted/public_paired/Train/seg0004_tcia_CT.nii.gz",
+      "label_values": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "label_names": {
+        "1": "liver",
+        "2": "spleen",
+        "3": "right_kidney",
+        "4": "left_kidney"
+      }
+    },
+    {
+      "pair_id": "MR_fixed__CT_moving__0006_tcia",
+      "fixed_label": "/autodl-fs/data/datasets/Learn2Reg_2021_MRCT/01_official_extracted/public_paired/Train/seg0006_tcia_MR.nii.gz",
+      "moving_label": "/autodl-fs/data/datasets/Learn2Reg_2021_MRCT/01_official_extracted/public_paired/Train/seg0006_tcia_CT.nii.gz",
+      "label_values": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "label_names": {
+        "1": "liver",
+        "2": "spleen",
+        "3": "right_kidney",
+        "4": "left_kidney"
+      }
+    },
+    {
+      "pair_id": "MR_fixed__CT_moving__0008_tcia",
+      "fixed_label": "/autodl-fs/data/datasets/Learn2Reg_2021_MRCT/01_official_extracted/public_paired/Train/seg0008_tcia_MR.nii.gz",
+      "moving_label": "/autodl-fs/data/datasets/Learn2Reg_2021_MRCT/01_official_extracted/public_paired/Train/seg0008_tcia_CT.nii.gz",
+      "label_values": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "label_names": {
+        "1": "liver",
+        "2": "spleen",
+        "3": "right_kidney",
+        "4": "left_kidney"
+      }
+    },
+    {
+      "pair_id": "MR_fixed__CT_moving__0010_tcia",
+      "fixed_label": "/autodl-fs/data/datasets/Learn2Reg_2021_MRCT/01_official_extracted/public_paired/Train/seg0010_tcia_MR.nii.gz",
+      "moving_label": "/autodl-fs/data/datasets/Learn2Reg_2021_MRCT/01_official_extracted/public_paired/Train/seg0010_tcia_CT.nii.gz",
+      "label_values": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "label_names": {
+        "1": "liver",
+        "2": "spleen",
+        "3": "right_kidney",
+        "4": "left_kidney"
+      }
+    },
+    {
+      "pair_id": "MR_fixed__CT_moving__0012_tcia",
+      "fixed_label": "/autodl-fs/data/datasets/Learn2Reg_2021_MRCT/01_official_extracted/public_paired/Train/seg0012_tcia_MR.nii.gz",
+      "moving_label": "/autodl-fs/data/datasets/Learn2Reg_2021_MRCT/01_official_extracted/public_paired/Train/seg0012_tcia_CT.nii.gz",
+      "label_values": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "label_names": {
+        "1": "liver",
+        "2": "spleen",
+        "3": "right_kidney",
+        "4": "left_kidney"
+      }
+    },
+    {
+      "pair_id": "MR_fixed__CT_moving__0014_tcia",
+      "fixed_label": "/autodl-fs/data/datasets/Learn2Reg_2021_MRCT/01_official_extracted/public_paired/Train/seg0014_tcia_MR.nii.gz",
+      "moving_label": "/autodl-fs/data/datasets/Learn2Reg_2021_MRCT/01_official_extracted/public_paired/Train/seg0014_tcia_CT.nii.gz",
+      "label_values": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "label_names": {
+        "1": "liver",
+        "2": "spleen",
+        "3": "right_kidney",
+        "4": "left_kidney"
+      }
+    },
+    {
+      "pair_id": "MR_fixed__CT_moving__0016_tcia",
+      "fixed_label": "/autodl-fs/data/datasets/Learn2Reg_2021_MRCT/01_official_extracted/public_paired/Train/seg0016_tcia_MR.nii.gz",
+      "moving_label": "/autodl-fs/data/datasets/Learn2Reg_2021_MRCT/01_official_extracted/public_paired/Train/seg0016_tcia_CT.nii.gz",
+      "label_values": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "label_names": {
+        "1": "liver",
+        "2": "spleen",
+        "3": "right_kidney",
+        "4": "left_kidney"
+      }
+    }
+  ],
+  "content_sha256": "e935d45629df3a2410932b5e649bce63d388423e10e5aa195ff41ede40ec241c"
+}

@@ -1,0 +1,16 @@
+{
+  "schema": "registration_evaluation_result_v2",
+  "method_ids": [
+    "B01_ants_syn_mi"
+  ],
+  "evaluated_pairs": 8,
+  "labels_loaded_by_runner": false,
+  "pair_metrics": "pair_metrics.csv",
+  "organ_metrics": "organ_metrics.csv",
+  "summary": "summary.csv",
+  "label_availability_policy": "exclude_if_missing_in_fixed_or_moving_label",
+  "headline_overlap_aggregation": "equal_weight_label_macro_after_excluding_unavailable",
+  "n_requested_organ_cases": 32,
+  "n_evaluable_organ_cases": 30,
+  "n_unavailable_organ_cases": 2
+}

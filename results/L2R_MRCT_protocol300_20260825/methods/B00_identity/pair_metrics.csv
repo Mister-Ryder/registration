@@ -1,0 +1,9 @@
+﻿fixed_phase,fold_fraction,mean_assd_mm,mean_dice,mean_displacement_mm,mean_hd95_mm,method_id,moving_phase,n_evaluable_organs,n_requested_organs,p95_displacement_mm,pair_id,runtime_seconds,sd_log_jacobian,subject_id,task_domain,task_group,valid_sampling_fraction
+mr,0.0,7.946403838843101,0.5629294104062018,0.0,21.2069904668224,B00_identity,ct,3,4,0.0,MR_fixed__CT_moving__0002_tcia,3.9222977715544403,0.0,0002_tcia,l2r_mrct,mr_target,1.0
+mr,0.0,40.314287717735986,0.10396211768814594,0.0,75.5338908097274,B00_identity,ct,3,4,0.0,MR_fixed__CT_moving__0004_tcia,2.4957449389621615,0.0,0004_tcia,l2r_mrct,mr_target,1.0
+mr,0.0,8.804247295247238,0.4653773136592546,0.0,25.03151933177154,B00_identity,ct,4,4,0.0,MR_fixed__CT_moving__0006_tcia,2.3433389184065163,0.0,0006_tcia,l2r_mrct,mr_target,1.0
+mr,0.0,8.65123085427354,0.5470409177219263,0.0,23.04097536129001,B00_identity,ct,4,4,0.0,MR_fixed__CT_moving__0008_tcia,2.4615661897696555,0.0,0008_tcia,l2r_mrct,mr_target,1.0
+mr,0.0,13.995189867599269,0.37726879047985923,0.0,39.3911696816618,B00_identity,ct,4,4,0.0,MR_fixed__CT_moving__0010_tcia,2.246627814602107,0.0,0010_tcia,l2r_mrct,mr_target,1.0
+mr,0.0,16.426838660425023,0.2471027824112923,0.0,44.66678677300939,B00_identity,ct,4,4,0.0,MR_fixed__CT_moving__0012_tcia,2.476539760828018,0.0,0012_tcia,l2r_mrct,mr_target,1.0
+mr,0.0,25.455960119570925,0.1950101408821494,0.0,67.75622561395762,B00_identity,ct,4,4,0.0,MR_fixed__CT_moving__0014_tcia,2.627114186063409,0.0,0014_tcia,l2r_mrct,mr_target,1.0
+mr,0.0,8.861756775673202,0.4867395114495866,0.0,23.865514000169398,B00_identity,ct,4,4,0.0,MR_fixed__CT_moving__0016_tcia,2.3313571149483323,0.0,0016_tcia,l2r_mrct,mr_target,1.0

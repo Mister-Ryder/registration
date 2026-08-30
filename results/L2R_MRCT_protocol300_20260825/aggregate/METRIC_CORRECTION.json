@@ -1,0 +1,123 @@
+{
+  "schema": "l2r_mrct_metric_correction_v1",
+  "reason": "Two unavailable left-kidney annotations were previously scored as Dice=0.",
+  "aggregation": "equal-weight mean of four per-organ means after excluding unavailable cases",
+  "unavailable_organ_cases": [
+    {
+      "pair_id": "MR_fixed__CT_moving__0002_tcia",
+      "label_value": 4,
+      "label_name": "left_kidney"
+    },
+    {
+      "pair_id": "MR_fixed__CT_moving__0004_tcia",
+      "label_value": 4,
+      "label_name": "left_kidney"
+    }
+  ],
+  "methods": [
+    {
+      "method_id": "B00_identity",
+      "method": "Identity",
+      "legacy_mean_dice": 0.3523385128343537,
+      "corrected_mean_dice": 0.37086115085277055,
+      "n_evaluable_organ_cases": 30,
+      "n_unavailable_organ_cases": 2
+    },
+    {
+      "method_id": "B01_ants_syn_mi",
+      "method": "ANTs-SyN + MI",
+      "legacy_mean_dice": 0.5421495113619795,
+      "corrected_mean_dice": 0.574181385809051,
+      "n_evaluable_organ_cases": 30,
+      "n_unavailable_organ_cases": 2
+    },
+    {
+      "method_id": "B02_convexadam_mind",
+      "method": "ConvexAdam + MIND-SSC",
+      "legacy_mean_dice": 0.6871771102675899,
+      "corrected_mean_dice": 0.7350273972838004,
+      "n_evaluable_organ_cases": 30,
+      "n_unavailable_organ_cases": 2
+    },
+    {
+      "method_id": "B03_fireants",
+      "method": "FireANTs",
+      "legacy_mean_dice": 0.44577118900756385,
+      "corrected_mean_dice": 0.471177589509062,
+      "n_evaluable_organ_cases": 30,
+      "n_unavailable_organ_cases": 2
+    },
+    {
+      "method_id": "B04_dino_reg",
+      "method": "DINO-Reg",
+      "legacy_mean_dice": 0.7289454351976875,
+      "corrected_mean_dice": 0.7821117172443646,
+      "n_evaluable_organ_cases": 30,
+      "n_unavailable_organ_cases": 2
+    },
+    {
+      "method_id": "B05_masr_dns_io",
+      "method": "MASR/DNS + IO",
+      "legacy_mean_dice": 0.3623214448278096,
+      "corrected_mean_dice": 0.3807755064434655,
+      "n_evaluable_organ_cases": 30,
+      "n_unavailable_organ_cases": 2
+    },
+    {
+      "method_id": "B06_synmse",
+      "method": "SynMSE",
+      "legacy_mean_dice": 0.3753617180186512,
+      "corrected_mean_dice": 0.3948810591152798,
+      "n_evaluable_organ_cases": 30,
+      "n_unavailable_organ_cases": 2
+    },
+    {
+      "method_id": "B07_locor",
+      "method": "Locor",
+      "legacy_mean_dice": 0.5867376676779403,
+      "corrected_mean_dice": 0.6273344251972343,
+      "n_evaluable_organ_cases": 30,
+      "n_unavailable_organ_cases": 2
+    },
+    {
+      "method_id": "B08_dgmir_u",
+      "method": "DGMIR-U",
+      "legacy_mean_dice": 0.34234958879818383,
+      "corrected_mean_dice": 0.3617621166847961,
+      "n_evaluable_organ_cases": 30,
+      "n_unavailable_organ_cases": 2
+    },
+    {
+      "method_id": "B09_m2m_reg",
+      "method": "M2M-Reg",
+      "legacy_mean_dice": 0.3725473504265203,
+      "corrected_mean_dice": 0.39436685058233867,
+      "n_evaluable_organ_cases": 30,
+      "n_unavailable_organ_cases": 2
+    },
+    {
+      "method_id": "B10_ours",
+      "method": "PRA-CM v3",
+      "legacy_mean_dice": 0.3909733243287474,
+      "corrected_mean_dice": 0.41238352361603375,
+      "n_evaluable_organ_cases": 30,
+      "n_unavailable_organ_cases": 2
+    },
+    {
+      "method_id": "B11_transmorph_mind",
+      "method": "TransMorph + MIND-SSC",
+      "legacy_mean_dice": 0.3763416838058149,
+      "corrected_mean_dice": 0.3977300919794563,
+      "n_evaluable_organ_cases": 30,
+      "n_unavailable_organ_cases": 2
+    },
+    {
+      "method_id": "B12_corrmlp_mind",
+      "method": "CorrMLP + MIND-SSC",
+      "legacy_mean_dice": 0.46943826894821605,
+      "corrected_mean_dice": 0.4996819914730902,
+      "n_evaluable_organ_cases": 30,
+      "n_unavailable_organ_cases": 2
+    }
+  ]
+}
